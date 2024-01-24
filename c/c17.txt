@@ -1,0 +1,103 @@
+----------------------Q1---------------
+#include <stdio.h>
+
+int main()
+{
+    int i, num;
+
+    /* Input a number to print table */
+    printf("Enter number to print table: ");
+    scanf("%d", &num);
+
+    for(i=1; i<=10; i++)
+    {
+        printf("%d * %d = %d\n", num, i, (num*i));
+    }
+
+    return 0;
+}
+----------------------Q2--------------------
+#include<conio.h>
+#include<stdio.h>
+
+//all variables declared globally
+int a[20][20],i,j,r,c,ch,sum; // a=2d array , r= rows , c=columns ch=choice sum=sum of odd element
+
+//accept rows and columns
+void Accept()
+   {
+      printf("\nEnter number of rows:");
+      scanf("%d",&r);
+      printf("\nEnter number of columns:");
+      scanf("%d",&c);
+
+       //to accept array
+      for(i=0;i<r;i++)
+      {
+      	for(j=0;j<c;j++)
+         {
+         	printf("\nEnter elements : ");
+            scanf("%d",&a[i][j]);
+         }
+      }
+   }
+
+//to display array
+   void display()
+   {
+     for(i=0;i<r;i++)
+      {
+      	for(j=0;j<c;j++)
+         {
+         	printf("%d ",a[i][j]);
+         }
+         	printf("\n");
+      }
+   }
+
+//to tranpose given array
+   void transpose()
+   {
+      for(i=0;i<r;i++)
+      {
+      	for(j=0;j<c;j++)
+         {
+         	printf("%d ",a[j][i]);
+         }
+         printf("\n");
+      }
+   }
+
+//to calculate sum of all odd  array elements
+   void sumofoddnumber()
+   {
+      sum=0;
+      for(i=0;i<r;i++)
+      {
+      	for(j=0;j<c;j++)
+         {
+         	if(a[i][j]%2!=0)
+            {
+            	sum=sum+a[i][j];
+            }
+         }
+      }
+      printf("Sum of all odd elements : %d\n",sum);
+   }
+
+
+void main()
+{
+    do
+    {
+    //to create menu     
+   printf("\n1)Accept matrix\n2)Transpose of matrix\n3)sum of all odd elements of matrix\n4)Exit\nEnter choice: ");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+   	        case 1:Accept();display();break;
+                case 2:transpose();break;
+                case 3:sumofoddnumber();break;
+        }
+    }while(ch!=4);
+}

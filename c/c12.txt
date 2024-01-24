@@ -1,0 +1,71 @@
+-------------------Q1----------------------
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+
+    printf("Enter any number to find sum of its digit: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+
+    printf("Sum of digits = %d", sum);
+
+    return 0;
+}
+
+----------------------Q2-------------------
+#include<stdio.h>
+#include<conio.h>
+
+//calculate the arithmetic mean and harmonic mean
+void calculation(int a,int b)
+{
+   float AM, HM; // AM=Arithmetic Mean , HM=Harmonic Mean
+
+   AM=float((a+b))/2; // Formula AM= (a+b)/2
+   HM=a*b/float((a+b)); // Formula HM = ab/(a+b)
+
+   //To display Arithmetic Mean & Harmonic Mean
+   printf("\nArithmetic Mean is : %f",AM);
+   printf("\nHarmonic Mean is   : %f",HM);
+}
+
+//swapping of 2 numbers
+void swap(int a, int b)
+{
+	int temp;
+   printf("\nbefore swapping of 2 numbers : \na = %d\nb = %d",a,b);
+   temp=a;
+   a=b;
+   b=temp;
+   printf("\nAfter swapping of 2 numbers  : \na = %d\nb = %d",a,b);
+}
+
+void main()
+{
+   int a,b,ch;
+
+   //Accept 2 numbers
+   printf("\nEnter the 1st number: ");
+   scanf("%d",&a);
+   printf("\nEnter the 2nd number: ");
+   scanf("%d",&b);
+
+   //create menu
+   do{
+   	printf("\n\n********menu********\n");
+   	printf("\n1.Swap 2 numbers\n2.Calculate Arithmatic mean and harmonic mean\n3.Exit\nEnter your choice: ");
+      scanf("%d",&ch);
+      switch(ch)
+      {
+      	 case 1:swap(a,b);break;
+         case 2:calculation(a,b);break;
+         default:printf("you should choose number from 1 to 3");break;
+      }
+   }while(ch!=3);
+
+}

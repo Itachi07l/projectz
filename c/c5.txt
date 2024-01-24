@@ -1,0 +1,56 @@
+------------------Q1----------------------
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+   float l,b,h,area,volume; // l=length , b=breadth , h=height
+   printf("\nEnter value of lenght:");
+   scanf("%f",&l);
+   printf("\nEnter value of breadth:");
+   scanf("%f",&b);
+   printf("\nEnter value of height:");
+   scanf("%f",&h);
+   //formula of surface area of a  cuboids
+   area=2*(l*b+l*h+b*h);
+   //formula of volume of a  cuboids
+   volume=l*b*h;
+   printf("\nSurface area of cuboids: %f",area);
+   printf("\nVolume of cuboids: %f",volume);
+   getch();
+}
+
+----------------------Q2-----------------------
+#include<stdio.h>
+#include<ctype.h>
+#include<string.h>
+void Stral(char str[])
+{
+ int i;
+
+ // To replace space by * in sentence
+ for(i=0;i<=strlen(str)-1;i++)
+ {
+ if(str[i]==' ')
+  str[i]='*';
+
+ // To change the case of alphabets in sentence
+ if(islower(str[i]))
+  str[i]=toupper(str[i]);
+ else
+  str[i]=tolower(str[i]);
+
+ // To replace digits by ? in sentence
+ if(isdigit(str[i]))
+  str[i]='?';
+ }
+
+ printf("\n %s \n",str);
+}
+
+void main()
+{
+ char str[100];
+ printf("\n Enter any sentence:-");
+ fgets(str,100,stdin);
+ Stral(str);
+}

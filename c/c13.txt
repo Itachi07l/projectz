@@ -1,0 +1,66 @@
+--------------------Q1------------------
+#include <stdio.h>
+
+int main()
+{
+    int i, n, sum=0;
+
+    /* Input range to find sum of odd numbers */
+    printf("Enter upper limit: ");
+    scanf("%d", &n);
+
+    /* Find the sum of all odd number */
+    for(i=1; i<=n; i+=2)
+    {
+        sum += i;
+    }
+
+    printf("Sum of odd numbers = %d", sum);
+
+    return 0;
+}
+--------------------Q2-------------------
+#include<stdio.h>
+#include<conio.h>
+void convert(int, int);
+
+int main()
+{
+        int num;
+        //accept value from user
+        printf("Enter a positive decimal number : ");
+        scanf("%d", &num);
+
+        printf("\nBinary number : ");
+        convert(num, 2); //calling convert()
+
+        printf("\n");
+
+        printf("\nOctal number : ");
+        convert(num, 8); //calling convert()
+
+        printf("\n");
+
+        printf("\nHexadecimal number : ");
+        convert(num, 16); //calling convert()
+
+        printf("\n");
+
+        getch();
+        return 0;
+}
+
+void convert (int num, int base)
+{
+        int rem = num%base; //rem=remainder
+
+        if(num==0)
+                return;
+        convert(num/base, base); //recursion
+
+        //printing values
+        if(rem < 10)
+                printf("%d", rem);
+        else
+                printf("%c", rem-10+'A' );
+}

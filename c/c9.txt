@@ -1,0 +1,69 @@
+---------------------------Q1-------------------
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	//declaration of character
+	char ch[10];
+
+   //accept character
+   printf("\nEnter any character: ");
+   gets(ch);
+
+   //compare 2 characters using strcmp function()
+   //The strcmp() function is used to compare two strings two strings
+   if(strcmp(ch,"a")==0||strcmp(ch,"A")==0)
+   {
+   	printf("\ncharacter is vowel.");
+   }
+   else if(strcmp(ch,"e")==0||strcmp(ch,"E")==0)
+   {
+   	printf("\ncharacter is vowel.");
+   }
+   else if(strcmp(ch,"i")==0||strcmp(ch,"I")==0)
+   {
+   	printf("\ncharacter is vowel.");
+   }
+   else if(strcmp(ch,"o")==0||strcmp(ch,"O")==0)
+	{
+   	printf("\ncharacter is vowel.");
+   }
+   else if(strcmp(ch,"u")==0||strcmp(ch,"U")==0)
+	{
+   	printf("\ncharacter is vowel.");
+   }
+   else
+   {
+   	printf("\ncharacter is consonant.");
+   }
+
+   return(0);
+	getch();
+}
+
+------------------------Q2------------------------
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a,b,i,j;
+
+   //accept starting number and ending number
+	printf("\nEnter starting number: ");
+   scanf("%d",&a);
+   printf("\nEnter ending number: ");
+   scanf("%d",&b);
+
+   //printing starting table till ending table
+   for(i=a;i<=b;i++)
+   {
+   	for(j=1;j<=10;j++)
+      {
+      	printf("%d\n",i*j);
+      }
+      printf("\n\n");
+   }
+   getch();
+   return(0);
+}

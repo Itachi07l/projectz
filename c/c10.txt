@@ -1,0 +1,76 @@
+------------------------Q1----------------------
+ #include<stdio.h>
+#include<conio.h>
+void main()
+{
+	float x,y;
+
+   //accept x and y values from user
+   printf("\nEnter value of x: ");
+   scanf("%f",&x);
+   printf("\nEnter value of y: ");
+   scanf("%f",&y);
+
+	//check in which quadrant points are belong
+   if(x>0&&y>0)
+   {
+   	printf("\nPoints are belongs in I quadrant.");
+   }
+   if(x<0&&y<0)
+   {
+   	printf("\nPoints are belongs in III quadrant.");
+   }
+   if(x<0&&y>0)
+   {
+   	printf("\nPoints are belongs in II quadrant.");
+   }
+   if(x>0&&y<0)
+   {
+   	printf("\nPoints are belongs in IV quadrant.");
+   }
+
+   getch();
+}
+
+--------------------------Q2---------------------
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,r,s;//n=number, r=remainder, s=sum
+
+   //accept value of x from user
+   printf("\nEnter value of n: ");
+   scanf("%d",&n);
+
+   // to make number reverse eg= 152: 251
+   while(n!=0)
+   {
+      r=n%10;
+      s=s*10+r;
+   	n=n/10;
+   }
+
+   //get single digit from reverse print in words
+   while(s!=0)
+   {
+      r=s%10;
+      s=s/10;
+      switch(r)
+      {
+      case 1:printf("one");break;
+      case 2:printf("two");break;
+      case 3:printf("three");break;
+      case 4:printf("four");break;
+      case 5:printf("five");break;
+      case 6:printf("six");break;
+      case 7:printf("seven");break;
+      case 8:printf("eight");break;
+      case 9:printf("nine");break;
+      default:printf("zero");break;
+      }
+      if(s!=0)
+      	printf("-");
+   }
+   getch();
+}

@@ -1,0 +1,61 @@
+#include<stdio.h>  
+ int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum+(r*r*r);    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("armstrong  number ");    
+else    
+printf("not armstrong number");    
+return 0;  
+} 
+-------------------Q2------------------
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+   //no=number,even=total number of even number in no, odd=Total number of odd number in no
+   //zero=Total number of zero in no, rem=remainder
+   int no,even,odd,zero,rem;
+   
+   //accept value of n
+   printf("\nEnter any number: ");
+   scanf("%d",&no);
+
+   odd=0;
+   even=0;
+   zero=0;
+
+   //To find separate each digit in a number and check digit is even, odd or zero
+   while(no!=0)
+   {
+   	rem=no%10;
+      no=no/10;
+      if(rem==0)
+      {
+          zero++;  //if number is zero then increment it by 1
+      }
+      else if(rem%2==0)
+      {
+      	 even++;  //if number is even then increment it by 1
+      }
+      else if(rem%2!=0)
+      {
+      	 odd++;  //if number is odd then increment it by 1
+      }
+   }
+
+   //printing a result
+   printf("\nTotal number of zero = %d",zero);
+   printf("\nTotal number of even = %d",even);
+   printf("\nTotal number of odd  = %d",odd);
+   getch();
+}

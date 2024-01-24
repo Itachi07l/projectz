@@ -1,0 +1,45 @@
+-----------------------------Q1------------------------
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   char s[100],ch; // s=string 
+   int i,c=0; 
+   printf("Enter the string: ");
+   gets(s);  //All the characters entered by the user get stored in a character array.
+   printf("Enter the charcter: ");
+   scanf("%c",&ch); 
+   for(i=0;s[i]!='\0';i++)
+   {
+      if(s[i]==ch)
+      c++;
+   }
+   printf("\nOccurances of %c is %d",ch,c);
+   getch();
+}
+
+---------------------------Q2----------------------
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a,b,i,j;
+
+   //accept starting number and ending number
+	printf("\nEnter starting number: ");
+   scanf("%d",&a);
+   printf("\nEnter ending number: ");
+   scanf("%d",&b);
+
+   //printing starting table till ending table
+   for(i=a;i<=b;i++)
+   {
+   	for(j=1;j<=10;j++)
+      {
+      	printf("%d\n",i*j);
+      }
+      printf("\n\n");
+   }
+   getch();
+   return(0);
+}

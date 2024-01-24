@@ -1,0 +1,70 @@
+-------------------------Q1------------------
+#include <stdio.h>
+int main() {
+   int i, j, rows;
+   printf("Enter the number of rows: ");
+   scanf("%d", &rows);
+   for (i = rows; i >= 1; --i) {
+      for (j = 1; j <= i; ++j) {
+         printf("* ");
+      }
+      printf("\n");
+   }
+   return 0;
+}
+---------------------------------Q2------------------
+#include <stdio.h>
+
+void main()
+{
+    int a[10][10], transpose[10][10], r, c, i, j,sum=0, fig_code;
+    printf("Enter rows and columns of matrix: ");
+    scanf("%d %d", &r, &c);
+
+    // Storing elements of the matrix
+    printf("\nEnter elements of matrix:\n");
+    for(i=0; i<r; ++i)
+        for(j=0; j<c; ++j)
+        {
+            printf("Enter element a%d%d: ",i+1, j+1);
+            scanf("%d", &a[i][j]);
+        }
+
+    printf("-------------------------\n");
+    printf(" 1 --> sum of diagonal elements\n");
+    printf(" 2 --> Sum of even elements\n");
+    printf("-------------------------\n");
+    printf("Enter the Figure code\n");
+    scanf("%d", &fig_code);
+    switch(fig_code)
+    {
+ 
+    case 1:
+ for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            if(i==j)
+            {
+                sum=sum+a[i][j];
+            }
+        }
+    }    printf("\n sum of digonal elements= %d",sum);
+        break;
+    case 2:
+     
+        for(i=0; i<r; ++i)
+        for(j=0; j<c; ++j)
+        {
+            if(a[i][j]%2==0)
+                  sum=sum+a[i][j];
+
+        }
+        printf("\n sum of even elements= %d",sum);
+        break;
+ 
+    default:
+        printf("Error in figure code\n");
+        break;
+    }
+}

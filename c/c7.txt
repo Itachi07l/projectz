@@ -1,0 +1,97 @@
+______________________________Q1___________________________
+#include<stdio.h>
+#include<conio.h>
+//To calculate distance between 2 points 
+void distance(float x1,float y1,float x2,float y2)
+{
+	float ans1,ans2;
+	ans1=x1-x2;
+        ans2=y1-y2;
+        // %f is place holder for floating point values 
+        printf("Distance between two points is: %f x %f y.",ans1,ans2); }
+
+void main()
+{
+   float x1,y1,x2,y2;  //declaration of x1,y1,x2,y2
+   
+   //accept values of x1,x2,y1,y2
+   printf("\nEnter value of x1: ");
+   scanf("%f",&x1);
+
+   printf("\nEnter value of y1: ");
+   scanf("%f",&y1);
+   
+   printf("\nEnter value of x2: ");
+   scanf("%f",&x2);
+   
+   printf("\nEnter value of y2: ");
+   scanf("%f",&y2);
+   
+    //calling distance function 
+   distance(x1,y1,x2,y2);
+   getch();
+}
+
+-------------------------------Q2---------------------
+) #include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	//declaration of 2 matrix a and b
+       //r=rows , c=columns
+	int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;
+
+   //accept rows and columns
+	printf("\nEnter the number of rows: ");
+	scanf("%d",&r);
+	printf("\nEnter the number of columns: ");
+	scanf("%d",&c);
+
+   //accept 1st matrix
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+      	printf("\nEnter %d element: ",i+1);
+			scanf("%d",&a[i][j]);
+		}
+	}
+
+   //accept 2nd matrix
+	printf("\nEnter the elements of second matrix \n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+      	printf("\nEnter %d element: ",i+1);
+			scanf("%d",&b[i][j]);
+		}
+	}
+
+   //multiplication of 2 matrix
+	printf("\nMultiplication of the matrix:\n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			mul[i][j]=0;
+			for(k=0;k<c;k++)
+			{
+				mul[i][j]+=a[i][k]*b[k][j];
+			}
+		}
+	}
+
+	//for printing multiplication matrix
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("%d\t",mul[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+

@@ -1,0 +1,33 @@
+-----------------------Q1-------------------
+#include<stdio.h>  
+int main()    
+{    
+ int i,fact=1,number;    
+ printf("Enter a number: ");    
+  scanf("%d",&number);    
+    for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  printf("Factorial of %d is: %d",number,fact);    
+return 0;  
+}   
+---------------------Q2--------------------
+#include<stdio.h>
+int main()
+{
+      int digit, num,rem;
+      printf("Enter positive integer number: ");
+      scanf("%d", &num); 
+     while(num>0)
+         {
+          rem=rem*10+num%10;
+           num=num/10;
+          }
+      printf("\nYou have entered: ");
+      while (rem > 0)
+      {            digit = rem % 10; 
+            printf("\t %d",digit);
+            rem=rem/10;
+      }
+      return 0;
+}
