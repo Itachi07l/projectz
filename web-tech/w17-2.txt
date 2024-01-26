@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>registration form</h1>
+    <form>
+        name:<input type="text"><br>
+        contact no<input  type="number"><br>
+        gender:<input type="radio" name="gender" value="male">
+                <input type="radio" name="gender" value="female">
+        date ofpurchase<input type="text"><br>
+        <select name="item">
+            <option name="item" >select an option</option>
+            <option name="item" >item2</option>
+            <option name="item" >item3</option>
+            <option name="item" >item4</option>
+            <option name="item" >item5</option>
+        </select><br>
+        suggestion<textarea rows="5" cols="80"></textarea>
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> <body>
+        <h1>whether a number is perfect or not</h1>
+        <p>enter a no</p>
+        <input type="text" id="n">
+        <button onclick="perfect()">check</button>
+        <p id="s"></p>
+        <script>
+            function perfect() {
+                var flag, rem, add = 0, no;
+                no = document.getElementById("n").value;
+                flag = no;
+                for(i=0;i<no;i++){
+                    rem=no%i;
+                    if(rem==0){add+=i}
+                }
+                if(add==flag){ // var s = document.getElementById("s");
+                    //s = document.write("it is an perfect no").value
+                    var p = document.getElementById("s").innerHTML = "it is an perfect no" ;
+                }
+                else{
+                    // var s = document.getElementById("s");
+                    // s = document.write("it is not a perfect no").value
+                    var p = document.getElementById("s").innerHTML = "it is not perfect no" ;
+                }
+            
+            }
+        </script>
+    </body>
+</html>

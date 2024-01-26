@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> enter a number</p>
+    <input type="text" id="num"><br>
+    <button onclick="adddigit()">ans</button>
+    <p>result <input id="result"></p>
+</body>
+<script>
+    function adddigit(){
+        var num ,rem ,sum=0;
+        num=parseInt(document.getElementById("num").value);
+        while(num>0){
+            rem=num%10;
+            sum=sum+rem;
+            num=Math.floor(num/10);
+        }
+        document.getElementById("result").value=sum;
+    }
+
+//easy way 
+    let a=[1,2,3,4];
+    let a1=a.reduce((a,b)=>{return a+b})
+    console.log(a1);
+</script>
+
+</html>

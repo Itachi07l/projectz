@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    th{background-color: rgba(140, 246, 211, 0.857);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;}
+    td{background-color: rgb(195, 213, 244);
+    font-weight: bold;
+    padding: 8px  6px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    </style>
+</head>
+<body><table cellpadding="2" border>
+        <thead><tr> <th>day time</th>
+                    <th>monday</th>
+                    <th>tuesday</th>
+                    <th>wednesday</th>
+                    <th>thursday</th>
+                    <th>firday</th>
+                    <th>sturday</th></tr></thead>
+        <tbody><tr>
+                <td>11:20 to 12:10</td>
+                <td>web technology</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td>OBHR</td>
+                <td> </td> </tr>
+            <tr><td>12:10 to 1:00</td>
+                <td>web technology</td>
+                <td>account</td>
+                <td>account</td>
+                <td> account</td>
+                <td>BM</td>
+                <td>BM </td></tr>
+            <tr><td>1:00 to 1:50</td>
+                <td>RDBMS</td>
+                <td>RDBMS</td>
+                <td>BM</td>
+                <td> BM</td>
+                <td>RDBMS</td>
+                <td>RDBMS </td></tr>
+            <tr><td>1:50 to 2:05</td>
+                <td colspan="6">BREAK</td></tr>
+            <tr><td>2:05 to 2:55</td>
+                <td>account</td>
+                <td>web technology</td>
+                <td>OBHR</td>
+                <td> </td>
+                <td></td>
+                <td>OBHR </td></tr>
+            <tr><td>2:55 to 3:45</td>
+                <td></td>
+                <td>OBHR</td>
+                <td>web technology</td>
+                <td> </td>
+                <td></td>
+                <td> </td></tr></tbody>
+    </table>
+</body>
+</html>

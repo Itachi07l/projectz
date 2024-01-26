@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul type="disc">
+        <li>honda</li>
+            <ul type="square">
+                <li>petrol</li>
+                    <ol>
+                        <li>honda city</li>
+                        <li>brio</li>
+                    </ol>
+            </ul>
+            <ul type="square">
+                <li>diesel</li>
+                    <ol>
+                        <li>amaze </li>
+                        <li>brio</li>
+                    </ol>
+            </ul>
+            <li>maruti-suzuki</li>
+            <ul type="square">
+                <li>petrol</li>
+                    <ol>
+                        <li>swift </li>
+                        <li>ritz</li>
+                    </ol>
+            </ul>
+            <ul type="square">
+                <li>diesel</li>
+                    <ol>
+                        <li>swift-desire </li>
+                    </ol>
+            </ul>
+    </ul>
+</body>
+
+</html>

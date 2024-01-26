@@ -1,0 +1,112 @@
+//main file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<frameset rows="*,*,*">
+        <frame src="first.html"></frame>
+    <frameset cols=*,*>
+        <frame src="sec.html" name="f2"></frame>
+        <frame src="thir.html" name="f3"></frame>
+    </frameset>
+</frameset>
+</html>
+
+//first.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rcm clg</h1>
+</body>
+</html>
+
+//sec.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>name of the course</h1>
+    <ol>
+        <li><a href="bba.html" target="f3">bba</a></li>
+        <li><a href="bca.html" target="f3">bca</a></li>
+    </ol>
+</body>
+</html>
+
+//thir.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>subject</h1>
+</body>
+</html>
+
+//bba.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>subject</h1>
+
+    <ol>
+        <li>math</li>
+        <li>bc</li>
+        <li>ocm</li>
+        <li>ac</li>
+        <li>pom</li>
+    </ol>
+</body>
+
+</html>
+
+//bca.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>subject</h1>
+    <ol>
+        <li>bc</li>
+        <li>pom</li>
+        <li>c</li>
+        <li>dbms</li>
+        <li>satic</li>
+    </ol>
+</body>
+
+</html>

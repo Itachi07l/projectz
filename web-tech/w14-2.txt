@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><form id="f1" >
+    <h1>user login</h1>
+    <label for="name">name</label>
+    <input  type="text" name="name" id="name"><br><br>
+    <label for="password">password</label>
+    <input  type="password" name="password" id="password"><br><br>
+    <input type="submit" value="login" id="btn" onclick="login()">
+</form>
+<script>
+    function login(){
+    var name=document.getElementById("name").value;
+    var password=document.getElementById("password").value;
+    var btn=document.getElementById("f1");
+    // btn.style.display='none';
+    if(name=="abc" && password=="abc"){
+        f1.action="slipno9.2.html" 
+    }
+    // else if(name!="abc" && password!="abc"){
+    
+    // }
+    else{alert("name and password is incorrect!")}
+    }
+</script>
+</body>
+</html>

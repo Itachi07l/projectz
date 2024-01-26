@@ -1,0 +1,100 @@
+//main file
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+    <frameset rows="20,80">
+        <frame src="heading.html" name="frm1"></frame>
+        <frameset cols="30,70">
+            <frame src="city.html" name="frm2"></frame>
+            <frame src="pune.html" name="frm3"></frame>
+        </frameset>
+    </frameset>
+</html>
+
+//city .html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2><i>city</i></h2>
+    <ol type="1">
+        <li><a href="pune.html" target="frm3">pune</a></li>
+        <li><a href="mumbai.html" target="frm3">mumbai</a></li>
+
+    </ol>
+</body>
+</html>
+
+//headline .html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align=center>it industries in india</h1>
+</body>
+</html>
+
+//mumbai .html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>mumbai</h1>
+    <ul>
+        <li>
+            capgimini
+        </li>
+        <li>
+            gicni
+        </li>
+    </ul>
+
+</body>
+</html>
+
+//pune.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>pune</h1>
+    <ul>
+        <li>
+            infosys
+        </li>
+        <li>
+            persistent
+        </li>
+    </ul>
+</body>
+
+</html>

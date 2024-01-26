@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain {width: 400px;
+            margin: auto;
+            display: block;
+            border: 2px solid black;
+            padding: 12px;}
+        input {width: 100%;}
+        hr {width: 5%;
+            border: 6px dotted #475050;
+            border-bottom: none;
+            margin: 10px auto;}
+    </style>
+</head>
+<body>
+    <b>slip no:1</b>
+    <div class="contain">
+        <label>input raduis value ang get the volume of sphare</label><br>
+        <label>radius</label>
+        <input type="text" id="text"><br>
+        <lable>volume</lable>
+        <input type="number" id="volume"><br>
+        <button onclick="volume()">find volume </button>
+    </div><hr>
+    <script>
+        function volume() {
+            var text = document.getElementById("text").value;
+            var rad = parseInt(text);
+            var vol = (4 / 3) * Math.PI * Math.pow(rad, 3);
+            document.getElementById("volume").value = vol
+            // alert("volume=" + vol);
+        }
+    </script>
+</body>
+</html>

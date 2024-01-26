@@ -1,0 +1,154 @@
+//main file 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><!--slipno 1 (Q2)-->
+<frameset rows="*,*,*">
+    <frame src="first.html"></frame>
+<frameset cols="*,*">
+    <frame src="sec.html"></frame>
+    <frame src="third.html"></frame>
+</frameset>
+<frameset cols="*,*,*">
+    <frame src="fourth.html"></frame>
+    <frame src="fifth.html"></frame>
+    <frame src="sixth.html"></frame>
+</frameset>
+</html>
+
+
+//first.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>p{font-weight: lighter;
+    font-size:20px;}
+    </style>
+</head>
+<body>
+   <center> <h1>First frame<p>your name and address</p></h1></center>
+</body>
+</html>
+
+//sec.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font-weight: lighter;
+    font-size:20px;}
+    </style>
+</head>
+<body>
+    <h1>Second frame<p>bullected list of favourite colour</p></h1>
+</body>
+</html>
+
+//thir.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font-weight: lighter;
+    font-size:20px;}
+    </style>
+</head>
+<body>
+    <h1>Second frame<p>bullected list of favourite colour</p></h1>
+</body>
+</html>
+
+
+//four.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  <style>
+        p{font-weight: lighter;
+    font-size:20px;}
+    </style>
+</head>
+<body>
+    <h1>Fourth frame<p>scrolling message</p></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet maiores ipsa modi saepe nostrum minima perspiciatis reprehenderit. Quod, repudiandae commodi unde aut incidunt eius maiores, sint debitis architecto, tempora inventore?</p>
+
+</body>
+</html>
+
+//fifth .html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1>p {
+            color: rgb(6, 124, 124);
+            font-weight: lighter;
+            font-size: 40px;
+            animation: ani 1s ease-in-out 1s 100;
+        }
+
+        @keyframes ani {
+            0% {
+                opacity: 10%;
+            }
+
+            50% {
+                opacity: 50%;
+            }
+
+            80% {
+                opacity: 100%;
+            }
+            100% {
+                opacity: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fifth frame<p>blinking message</p>
+    </h1>
+</body>
+</html>
+
+//sixth.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font-weight: lighter;
+    font-size:20px;}
+    </style>
+</head>
+<body>
+    <h1>Sixth frame<p>name of countries</p></h1>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="c" placeholder="enter a string"><br>
+    <input type="radio" id="c2" name="option">
+    display the character    at the specified position<br>
+    <button onclick="count()">submit </button>
+    <p id="q"></p>
+    <script>function count(){
+       var s=document.getElementById("c").value;
+       /* if(document.getElementById("c1").checked==true){
+            var ch=prompt("enter a character");
+            var i;
+            var cnt=0;
+            for(i=0;i<s.length;i++){
+                if(s[i]==ch){
+                    cnt++; }
+            } document.getElementById("q").innerText=cnt;
+        }*/
+     var pos=prompt("enter the position:");
+        document.getElementById("q").innerText=s[pos];}
+    </script>
+</body>
+</html>
