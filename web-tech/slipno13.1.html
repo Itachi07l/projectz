@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1 {
+            background-color: aqua;
+            border-radius: 4px;
+            width: 40px;
+            padding: 4px;
+            border: 2px solid rgb(237, 103, 103);
+        }
+    </style>
+</head>
+<body>
+    <form onclick="form()" >
+        name<input type="text" name="name" id="name"> <br>
+        password:<input type="password" name="password" id="password"><br>
+        <p id="q"></p>
+        <input type="submit"  value="submit">
+    </form>
+    <div id="p">
+        <h1>this webside is under-developing plz wait for it </h1>
+        <p>we will notify you when this webside is done</p>
+    </div>
+    <script>
+        var p = document.getElementById("p");
+        p.style.display = 'none';
+        function form() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            if (!name.match(/^[a-zA-Z]+$/)) {
+                document.getElementById("q").innerText = " contain alphabet only"
+            }
+            else if(name==""){
+                document.getElementById("q").innerText = "name can't be black"
+
+            }
+
+            else if (password.length < 6) {
+                // alert("passsword must be at least 6 characters long");
+                document.getElementById("q").innerText = "passsword must be at least 6 characters long"
+                return false;
+            }
+            else if (password.length > 6) {
+                let f = p.style.display = 'block'; }
+        }
+    </script>
+</body>
+</html>

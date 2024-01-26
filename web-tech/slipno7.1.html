@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>enter a string and check the count of vowels</h3>
+    <input type="text" id="text" placeholder="enter a strings">
+    <button onclick="vowels()">check</button>
+    <p id="p"></p>
+    <script>
+
+        function vowels() {
+            var strings1 = document.getElementById("text").value;
+            var str = strings1;
+            var c = 0;
+            var vowels = 'aAeEiIoOuU';
+            var vowelscounts = 0;
+            for (var i = 0; i < strings1.length; i++) {
+                if (vowels.indexOf(strings1[i]) !== -1) {
+                    vowelscounts += 1;
+                }
+            }
+            var p = document.getElementById("p").innerText = "vowel no count is:" + vowelscounts;
+            
+            // simple way 
+            // for(let i=0;i<str.length;i++){
+            // switch(str[i]){
+            //     case 'a':c+=1;break;
+            //     case 'e':c+=1;break;
+            //     case 'i':c+=1;break;
+            //     case 'o':c+=1;break;
+            //     case 'u':c+=1;break;
+            // }}
+            // document.getElementById("p").innerText = c;
+        }
+    </script>
+</body>
+
+</html>

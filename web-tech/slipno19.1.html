@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>factorial </h1>
+    <input type="text" id="text" placeholder="enter a number">
+    <input type="text" id="ans" placeholder="the factorial of no  is:">
+    <button onclick="fac()">ans</button>
+    <script>
+        function fac(){
+            var text=document.getElementById("text").value;
+            text1=parseInt(text);
+            var f=1;
+            for(i=1;i<=text1;i++){
+                f*=i;
+            }
+            document.getElementById("ans").value=f;
+        }
+    </script>
+</body>
+</html>

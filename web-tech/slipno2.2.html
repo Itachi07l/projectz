@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>enter a no:<input type="text" id="text">
+    <input type="button" value="dispaly" name="b1" onclick="find()">
+    <p id="p"></p><br><br>
+    <h1>plz go to console.log for a single table :right click ->inspect->console.log</h1>
+    <script>
+     function find(){
+            var no=parseInt(text.value);
+            var r,c;
+            document.write("<table border='1'>");
+                for(r=1;r<=10;r++){
+                    document.write("<tr>");
+                        for(c=1;c<=no;c++){
+                            document.write("<td>"+c+"*"+r+"="+r*c+"</td>");
+                        }
+                }
+        }
+        let a =prompt("enter a no for a table");
+        for (let i = 1; i <= 10; i++) {
+          console.log(a + "*" + i + "=" + a * i);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        name:<input type="text" id="name">
+        output:<input type="text" id="out" onclick="output();">
+    </form>
+    <script>
+        function output(){
+        var name=document.getElementById("name").value;
+        name=name.replace(/\s/g,"*")
+        name=name.replace(/[0-9]/g,"?")
+        document.getElementById('out').value=name;
+    }
+    </script>
+</body>
+</html>

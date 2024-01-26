@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p {
+            background-color: aqua;
+            border-radius: 2px;
+            width: 80px;
+            padding: 4px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="password()">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="add">address</label>
+        <input type="text" name="add"><br>
+
+        <label for="city">city</label>
+        <input type="text" name="city"><br>
+
+        <label for="pin-code">pin-code</label>
+        <input type="text" name="pin-code" id="pin">
+        
+        <p id="message"></p>
+        <p id="message1"></p>
+        <p onclick="password()" value="sumbit" id="p">next page</p>
+            <!-- <input type="submit" value="submit"> -->
+    </form>
+    <script>
+        function password() {
+            var name = document.getElementById("name").value;
+            var pin = document.getElementById("pin").value;
+            if (name == "") { document.getElementById("message").innerHTML = "***fill the name !"; }
+            else if (!name.match(/^[a-zA-Z]+$/)) {
+                document.getElementById("message").innerHTML = "contain alphabet only";
+            }
+            if (pin.length < 6 || pin.length > 6) {
+                document.getElementById("message1").innerHTML = "***pin-code must be 6 digit only !";
+            }
+            if (pin.length == 6) {
+document.write("form is succesfull sumbit when you click on mail button! <h1><a href=xyz@gmail.com>mail</a></h1>")}
+        }
+    </script>
+</body>
+
+</html>

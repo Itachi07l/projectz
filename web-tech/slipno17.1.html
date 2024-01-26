@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button onclick="count()">ans</button>
+    <p id="p"></p>
+    <script>
+
+        function count(){
+        var a=0;e=0;i=0;o=0;u=0,x=0;
+        var str=document.getElementById('text').value;
+        stra=str.length;
+        for(x=0;x<stra;x++){
+        if(str[x]=='a'){a++}
+        else if(str[x]=='e'){e++}
+        else if(str[x]=='i'){i++}
+        else if(str[x]=='o'){o++}
+        else if(str[x]=='u'){u++}}
+        document.getElementById('p').innerText="a:"+a+"   "+"e:"+e+"  "+"i:"+i+"  "+"o:"+o+"  "+"u:"+u+"  "}
+    </script>
+</body>
+</html>

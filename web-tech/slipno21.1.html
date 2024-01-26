@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="enter x number">
+    <input type="text" id="text1" placeholder="enter y number">
+    <input type="text" id="ans" placeholder="answer is :">
+    <button onclick="fac()">ans</button>
+    <script>
+        function fac() {
+            var text=document.getElementById("text").value;
+            var text1=document.getElementById("text1").value;
+            text=parseInt(text);
+            text1=parseInt(text1);
+            var ans=Math.pow(text,text1);
+            document.getElementById("ans").value=ans;
+        }
+    </script>
+</body>
+
+</html>
