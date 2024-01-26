@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@400;700&family=Foldit:wght@500&family=Titillium+Web:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: boder-box;
+            margin: 0;
+            padding: 0;
+        }
+        .desktop{display: none;}
+
+        .outline {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to top left, blue, rgb(0, 204, 255), rgb(81, 40, 194));
+        }
+
+        /* .inline:hover {
+            box-shadow: 8px 6px 8px -1px blue, 4px 1px 200px 20px rgb(237, 9, 78), -8px -8px 8px rgb(122, 5, 255);
+        } */
+
+        .inline {
+            animation-name: anmia2;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-duration: 12s;
+            z-index: 2;
+            box-shadow: 4px 4px 3px #2773a5;
+            width: 490px;
+            margin: 0px auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px 22px;
+            background-color: #ffffffcc;
+            /* background: linear-gradient(to top left #ffffffff,#ffffff33); */
+            backdrop-filter: blur(4px);
+            border-radius: 15px;
+        }
+
+        .inline h1 {
+            font-size: 2.5rem;
+            color: #212121;
+        }
+
+        .inline p {
+            margin-top: 4px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .body {
+            margin: 20px 0px;
+        }
+
+        .body p {
+            margin: 10px 0;
+        }
+
+        .body p label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .body p input {
+            width: 95%;
+            padding: 10px;
+            border: 2px solid #cccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .body p input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .body p input[type="submit"]:hover {
+            background-color: #0b8be0;
+        }
+
+        .foot p {
+            color: #555;
+            text-align: center;
+        }
+
+        .foot p a {
+            color: #2773a5;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            position: absolute;
+            background: linear-gradient(to top right, #ffffff33, #ffffffff);
+        }
+
+        .circle:hover {
+            box-shadow: 8px 6px 8px -1px rgba(0, 0, 255, 0.377), 4px 1px 200px 20px rgba(237, 9, 77, 0.389), -8px -8px 8px rgba(122, 5, 255, 0.333);
+        }
+
+        .c1 {
+            animation-name: anmia;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-duration: 12s;
+            top: 100px;
+            left: 40px;
+        }
+
+        .c2 {
+            animation-name: anmia1;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-duration: 12s;
+            bottom: 90px;
+            right: 50px;
+        }
+
+        @keyframes anmia {
+            1% {
+                top: 100px;
+            }
+
+            5% {
+                top: 120px;
+            }
+
+            15% {
+                top: 80px;
+
+            }
+
+            20% {
+                top: 120px;
+            }
+
+            60% {
+                top: 80px;
+            }
+
+            100% {
+                top: 120px;
+            }
+        }
+
+        @keyframes anmia1 {
+            1% {
+                bottom: 90px;
+            }
+
+            5% {
+                bottom: 120px;
+            }
+
+            15% {
+                bottom: 80px;
+
+            }
+
+            20% {
+                bottom: 120px;
+            }
+
+            60% {
+                bottom: 80px;
+            }
+
+            100% {
+                bottom: 120px;
+            }
+        }
+
+        @keyframes anmia2 {
+            1% {
+                box-shadow: 2px 3px 4px -1px red, -3px -4px 4px blue, 7px 1px 2px 7px aqua;
+
+            }
+
+            5% {
+                box-shadow: 3px 4px 4px -1px rgb(0, 26, 255), -4px -4px 4px rgb(255, 25, 0), 4px 1px 2px 7px rgb(0, 234, 255);
+
+            }
+
+            15% {
+                box-shadow: 2px 3px 3px -1px red, -3px -3px 3px blue, 2px 1px 204px 3px aqua;
+
+
+            }
+
+            20% {
+                box-shadow: 3px 3px 4px -1px rgb(187, 255, 0), -4px -4px 8px rgb(1, 49, 48), 7px 1px 204px 7px rgb(255, 0, 179);
+
+            }
+
+            60% {
+                box-shadow: 5px 3px 3px -1px rgb(137, 16, 249), -2px -4px 4px rgb(37, 118, 76), 7px 1px 204px 7px rgb(0, 255, 98);
+
+            }
+
+            100% {
+                box-shadow: 5px 7px 8px -1px red, -6px -8px 8px blue, 7px 1px 204px 73px rgb(153, 94, 255);
+            }
+        }
+
+        input:hover {
+            box-shadow: 2px 2px 3px -1px rgba(0, 0, 255, 0.377), 2px 1px 2px 1px rgba(237, 9, 77, 0.389), -4px -4px 5px rgba(122, 5, 255, 0.333);
+        }
+
+        .btn {
+            height: 40px;
+            width: 86px;
+            margin: 4px;
+            padding: 4px;
+            font-style: oblique;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 1s ease-in-out;
+        }
+
+        .btn:hover {
+            font-weight: bolder;
+            font-size: 21px;
+            text-decoration: none;
+            box-shadow: 2px 2px 8px -1px red, -2px -2px 8px blue, 7px 1px 204px 73px rgb(25, 227, 2);
+        }
+
+        .php {
+            color: black;
+            text-decoration: none;
+        }
+
+        .font-r {
+            font-family: 'Titillium Web';
+        }
+
+        @media screen and (max-width:500px) {
+            .outline {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .inline {
+                width: 312px;
+                top: 52%;
+                right: 1px;
+                padding: 16px 6px;
+                border-radius: 8px;
+            }
+
+            @keyframes anmia {
+                1% {
+                    top: 50px;
+                }
+
+                5% {
+                    top: 58px;
+                }
+
+                15% {
+                    top: 46px;
+                }
+
+                20% {
+                    top: 54px;
+                }
+
+                60% {
+                    top: 40px;
+                }
+
+                100% {
+                    top: 20px;
+                }
+
+            }
+
+            .btn {
+                font-weight: bolder;
+                height: 48px;
+                width: 65px;
+                margin: 2px;
+                padding: 2px;
+                font-style: oblique;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 17px;
+                transition: all 1s ease-in-out;
+            }
+
+            .inline h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        .b11:hover {
+            overflow: hidden;
+            transform: scale(2);
+            width: 580px;
+            height: 295px;
+            position: relative;
+            top: 6px;
+        }
+
+        .p1 {
+            display: none;
+        }
+
+        .sec {
+            display: flex;
+            margin-top: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:400px) {
+             .b11:hover{ overflow: hidden;
+                      transform: scale(1);
+                      width: 320px;
+                      height: 344px;
+                      position: absolute;
+                      top: 9px;}
+
+         .desktop{display: block;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline"><h1 class="desktop">plz turn on desktop mode !</h1>
+        <div class="inline">
+            <header class="header">
+                <h1 class="font-r">web-tech slip</h1>
+            </header>
+            <div class="body">
+                <main>
+                    <div class="sec">
+                        <button class="btn b1">slip-1
+                            <p class="p1"><a href="w1-1.html" class="php">Q1) Write a JavaScript program to
+                                    calculate the
+                                    volume of a sphere.</a></p>
+                            <p class="p1 p11"><a href="w1-2.html" class="php"> Q2) Create HTML page to Divide
+                                    the frames in
+                                    to different sections as shown below and add appropriate HTML files to each
+                                    frame.</a>
+                            </p>
+                        </button>
+
+
+                        <button class="btn b2">slip-2
+                            <p class="p1 p2"><a href="w2-1.html" class="php">Q1)1) Write a java script program
+                                    to accept a
+                                    number form user and display its multiplication table.</a></p>
+                            <p class="p1 p12"><a href="w2-2.html" class="php">Q2) Write the HTML code to create
+                                    the
+                                    following
+                                    table. Use internal CSS to format the table.</a></p>
+                        </button>
+
+
+                        <button class="btn b3">slip-3
+                            <p class="p1 p3"><a href="w3-1.html" class="php"><small>Q1) Write a java script
+                                        program to
+                                        accept
+                                        a number form user and calculate and display its sum of digits.</small></a></p>
+                            <p class="p1 p13"><a href="w3-2.html" class="php"><small>Q2) Write HTML code to
+                                        design a web
+                                        as
+                                        per given specification. Divide the browser screen into two frames. The first
+                                        frame
+                                        will display the heading. Divide the second frame into two columns. The frame on
+                                        the
+                                        left should be name of cities consisting of hyperlinks. Clicking on any one of
+                                        these
+                                        hyperlinks will display related information in right hand side frame as shown
+                                        below.</small></a></p>
+                        </button>
+
+                        <button class="btn b4">slip-4
+                            <p class="p1 p4"><a href="w4-1.html" class="php"><small>Q1)1)) Write a java script
+                                        program to
+                                        accept a number from user and check whether it is Armstrong number or
+                                        not.</small></a></p>
+                            <p class="p1 p14"><a href="w4-2.html" class="php"><small>Q2) Create HTML web page
+                                        with
+                                        following
+                                        specifications
+                                        i) Title should be about your College.
+                                        ii) Put image in the background
+                                        iii) Place your college name at the top of page in large text followed by
+                                        address in
+                                        smaller size.
+                                        iv) Add names of courses offered, each in different color, style and font
+                                        v) Add scrolling text about college.
+                                        vi) Add any image at the bottom.
+                                        (use External CSS to format the webpage)</small></a></p>
+                        </button>
+
+                        <button class="btn b5">slip-5
+                            <p class="p1 p5"><a href="w5-1.html" class="php">Q1)1) Write a java script program
+                                    to accept
+                                    a
+                                    number from user and check whether it is perfect number or not. </a></p>
+                            <p class="p1 p15"><a href="w5-2.html" class="php">Q2) Write HTML code to design a
+                                    website for
+                                    Online Shopping. Design home page which consist of list of items each with
+                                    hyperlink,
+                                    clicking on which should display related information on separate web page. (Use
+                                    external
+                                    CSS to format each web page).</a></p>
+                        </button>
+                    </div>
+                    <div class="sec">
+                        <button class="btn b6">slip-6
+                            <p class="p1 p6"><a href="w6-1.html" class="php">Q1)1) Write java script program to
+                                    accept a
+                                    number from user and check whether it is prime number or not</a></p>
+                            <p class="p1 p16"><a href="w6-2.html" class="php">Q2)Write a HTML code to display
+                                    calendar of
+                                    current month in tabular format. Use proper color for week days and holidays.
+                                    Display month name, year and images as advertisement at the beginning of the
+                                    calendar..</a></p>
+                        </button>
+
+                        <button class="btn b7">slip-7
+                            <p class="p1 p7"><a href="w7-1.html" class="php">Q1) Write a java script program to
+                                    accept a
+                                    string from user and display the count of vowel characters from that string</a></p>
+                            <p class="p1 p17"><a href="w7-2.html" class="php">Q2)Write a HTML code to display
+                                    Theory Time
+                                    Table of FYBBA(CA). Use internal CSS to format the </a></p>
+                        </button>
+
+                        <button class="btn b8">slip-8
+                            <p class="p1 p8"><a href="w8-1.html" class="php"><small>Q1) Write a java script
+                                        program to
+                                        accept a string and character from user and check the count of occurrences of
+                                        that character in string.</small></a></p>
+                            <p class="p1 p18"><a href="w8-2.html" class="php"><small>
+                                        Q2) Create HTML page with following specifications
+                                        i) Title should be about your self.
+                                        ii) color the background should be pink.
+                                        iii) Place your name at the top of page in large text and centered.
+                                        iv) Add names of your family members each in different size, color, style
+                                        and font.
+                                        v) Add scrolling text about your family.
+                                        vi) Add any image at the bottom. (Use internal CSS to format the web
+                                        page)</small></a></p>
+                        </button>
+
+                        <button class="btn b9">slip-9
+                            <p class="p1 p9"><a href="w9-1.html" class="php">Q1)Write a java script program to
+                                    accept a
+                                    string and check whether the input string is palindrome string or not.</a></p>
+                            <p class="p1 p19"><a href="w9-2.html" class="php">
+                                    Q2) Write the HTML code which generates the following output.(use internal CSS to
+                                    format the table .</a></p>
+                        </button>
+
+                        <button class="btn b10">slip-10
+                            <p class="p1 p10"><a href="w10-1.html" class="php"><small>Q1) Write a JavaScript
+                                        Program to
+                                        read a number from user, store its factors into the array and display that
+                                        array. (Handle onClick Event)</small></a></p>
+                            <p class="p1 p110"><a href="w10-2.html" class="php"><small>
+                                        Q2) Write HTML code which generates the following output and display each
+                                        element of list in different size, color & font. Use inline CSS to format the
+                                        list. [25 M]
+                                        1. DYP
+                                        • Courses
+                                        BCS
+                                        BCA
+                                        2. Indira
+                                        • Courses
+                                        BCA
+                                        MCs
+                                        3. ATSS
+                                        • Courses
+                                        BBA
+                                        BCS.</small></a></p>
+                        </button>
+                    </div>
+
+                    <div class="sec">
+                        <button class="btn b21">slip-11
+                            <p class="p1 p21"><a href="w11-1.html" class="php"><small>Q1) Write a JavaScript to
+                                        accept a
+                                        str and position (number) from user & display the character at specified
+                                        position.</small></a></p>
+                            <p class="p1 p221"><a href="w11-2.html" class="php"><small>Q2)Write HTML code which
+                                        generates
+                                        the following output and display each element of list in different size, color &
+                                        font. Use external CSS[25 M]<br>
+                                        • Non flowering plants<br>
+                                        o Fern<br>
+                                        o Spore<br>
+                                        • Flowering plants<br>
+                                        Lilly<br>
+                                        Rose<br>
+                                        1. Red Rose<br>
+                                        2. Pink Rose.</small></a></p>
+                        </button>
+
+                        <button class="btn b22">slip-12
+                            <p class="p1 p22"><a href="w12-1.html" class="php"><small>Q1)Design a student
+                                        registration-form fields Name,Add,city & Pin-Code.Write a js following
+                                        validation:<br>
+                                        i. Check name should not be empty and contain alphabets only
+                                        ii. Pin-code must be 6 digits only</small></a></p>
+                            <p class="p1 p222"><a href="w12-2.html" class="php"><small>
+                                        Q2) Create HTML page with following specifications
+                                        i) Title should be about your College.
+                                        ii) Put image in the background
+                                        iii) Place your college name at the top of page in large text followed by
+                                        address
+                                        in smaller size.
+                                        iv) Add names of courses offered, each in different color, style and font
+                                        v) Add scrolling text about college.
+                                        vi) Add any image at the bottom.</small></a></p>
+                        </button>
+
+                        <button class="btn b23">slip-13
+                            <p class="p1 p23"><a href="w13-1.html" class="php">Q1Design a login form with
+                                    fields User
+                                    Name, Password and Login button. Write a java script code to accept username and
+                                    password, validate login details and display a message accordingly</a></p>
+                            <p class="p1 p223"><a href="w13-2.html" class="php">
+                                    Q2) Write a HTML code which will divide web page in three frames. First frame should
+                                    consists of name of college as heading. Second frame should consists of name of
+                                    courses with hyperlink. Once click on any course it should display subject of that
+                                    course in third frame. </a></p>
+                        </button>
+
+                        <button class="btn b24">slip-14
+                            <p class="p1 p24"><a href="w14-1.html" class="php">Q1)Write a HTML code to display
+                                    the name of
+                                    your family members each in different color, size and style. Also display the
+                                    following polynomial expression &nbsp;a0+a1x^1+a2x^2+a3x^3+a4x^4.</a></p>
+                            <p class="p1 p224"><a href="w14-2.html" class="php">
+                                    Q2) Write a JavaScript Program to accept user name and password from user, if User
+                                    name and Password is same then display his score card on the next page as shown
+                                    below. </a></p>
+                        </button>
+
+                        <button class="btn b25">slip-15
+                            <p class="p1 p25"><a href="w15-1.html" class="php"><small></small>Q1)Write a
+                                    JavaScript
+                                    program to Display current Day, Date, Month, Year and Time on the web page and greet
+                                    the user accordingly.</small></a></p>
+                            <p class="p1 p225"><a href="w15-2.html" class="php"><small>
+                                        Q2) Create HTML page with following specifications
+                                        i) Title should be about your City.
+                                        ii) Color the background by Pink color.
+                                        iii) Place your city name at the top of page in large text and in blue color.
+                                        iv) Add names of the landmarks in your city, each in different color, style and
+                                        font
+                                        v) Add scrolling text about your City.
+                                        vi) Add any image at the bottom.
+                                        (Use inline CSS to format the web page)</small></a></p>
+                        </button>
+                    </div>
+                    <div class="sec">
+                        <button class="btn b26">slip-16
+                            <p class="p1 p26"><a href="w16-1.html" class="php"><small>Q1) Write a java script
+                                        code to
+                                        accept a sentence from the user and alters it as follows: Every space is
+                                        replaced by * and digits are replaced by ?</small> </a></p>
+                            <p class="p1 p226"><a href="w16-2.html" class="php"><small>
+                                        Q2) Write HTML code which generates the following output and display each
+                                        element of list in different size, color & font. Use inline CSS to format the
+                                        list.<br>
+                                        • Honda
+                                        Petrol
+                                        1) Honda City
+                                        2) Brio
+
+                                        Diesel
+                                        1) Amaze
+                                        2) Brio
+
+                                        • Maruti-Suzuki
+                                        Petrol
+                                        1) Swift
+                                        2) Ritz
+
+                                        Diesel
+                                        1) Swift-Desire.</small></a>
+                            </p>
+                        </button>
+
+
+                        <button class="btn b27">slip-17
+                            <p class="p1 p27"><a href="w17-1.html" class="php">Q1)Write a java script code to
+                                    accept a
+                                    string from user and display the occurrences of every vowel character from string
+                                </a></p>
+                            <p class="p1 p227"><a href="w2-2.html" class="php">Q2)Design an HTML form for
+                                    customer
+                                    registration visiting a departmental store. Form should consists of fields such as
+                                    name,contact no, gender, preferred days of purchasing, favorite item(to be selected
+                                    from a list of items),suggestions etc.. You should provide button to submit as well
+                                    as reset the form contents.</a></p>
+                        </button>
+
+
+                        <button class="btn b28">slip-18
+                            <p class="p1 p28"><a href="w18-1.html" class="php"><small>Q1)Write a java script
+                                        program to
+                                        accept the value of n and display all odd numbers up to n.</small></a></p>
+                            <p class="p1 p228"><a href="w2-2.html" class="php"><small>
+                                        Q2) Write the HTML code which generates the following output. (Use external CSS
+                                        to format the given table) </small></a></p>
+                        </button>
+
+                        <button class="btn b29">slip-19
+                            <p class="p1 p29"><a href="w19-1.html" class="php"><small>Q1)Write a java script
+                                        code to
+                                        accept a number form user and display its factorial.</small></a></p>
+                            <p class="p1 p229"><a href="w19-2.html" class="php"><small>
+                                        Q2) Design an HTML form to take the information of a customer for booking a
+                                        travel plan consisting of fields such as name, address, contact no., gender,
+                                        preferred season(Checkboxes), location type(to be selected from a list) etc. You
+                                        should provide button to submit as well as reset the form contents. (All the
+                                        fields should be properly aligned) </small></a></p>
+                        </button>
+
+                        <button class="btn b30">slip-20
+                            <p class="p1 p30"><a href="w20-1.html" class="php">Q1)Write a js code to accept a
+                                    number n
+                                    from user and display first n terms of Fibonacci series </a></p>
+                            <p class="p1 p330"><a href="w20-2.html" class="php">Q2)Create HTML page with
+                                    following
+                                    specifications i) Title should be about your Car. ii) Color the background by Pink
+                                    color. iii) Place your car name at the top of page in large text and in green color.
+                                    iv) Add names of features in your car, each in different color, style and font v)
+                                    Add scrolling text about your Car. vi) Add any image at the bottom. (Use external
+                                    CSS to format the web page</a></p>
+                        </button>
+                    </div>
+                    <div class="sec">
+                        <button class="btn b31">slip-21
+                            <p class="p1 p31"><a href="w21-1.html" class="php"><small>Write a java script code
+                                        to accept
+                                        the values of x and y and then display xy</small> </a></p>
+                            <p class="p1 p331"><a href="w21-2.html" class="php"><small>
+                                        Q2) Write HTML code which generates the following output and display each
+                                        element of list in different size, color & font. Use internal CSS to format the
+                                        list.<br>
+                                        o Coffee<br>
+                                        o Tea<br>
+                                        Black Tea<br>
+                                        Green Tea<br>
+                                        1) Africa<br>
+                                        2) China </small></a>
+                            </p>
+                        </button>
+
+
+                        <button class="btn b32">slip-22
+                            <p class="p1 p32"><a href="w22-1.html" class="php">Q1)Write a java script code to
+                                    accept a
+                                    string and write a function to calculate length of string</a></p>
+                            <p class="p1 p332"><a href="w1-2.html" class="php">
+                                    Q2) Create HTML page to Divide the frames in to different sections as shown below
+                                    and add appropriate HTML files to each frame</a></p>
+                        </button>
+
+
+                        <button class="btn b33">slip-23
+                            <p class="p1 p33"><a href="w23-1.html" class="php"><small>Q1)Write a java script
+                                        code to
+                                        accept a number and write a function to calculate sum of digits of that
+                                        number.</small></a></p>
+                            <p class="p1 p333"><a href="web-tech/w23-2.html" class="php"><small> Q2) Write HTML code to
+                                        create
+                                        following table. (use External CSS to format the table)</small></a></p>
+                        </button>
+
+                        <button class="btn b34">slip-24
+                            <p class="p1 p34"><a href="w24-1.html" class="php"><small>Q1)Write a java script
+                                        code to
+                                        accept a number and write a function to calculate sum of digits of that
+                                        number.</small></a></p>
+                            <p class="p1 p334"><a href="w24-2.html" class="php"><small>
+                                        Q2) Write html code to display following list. (use internal CSS to format the
+                                        list)
+                                        i. Arts
+                                        • BA
+                                        • MA
+                                        ii. Commerce
+                                        • Bcom
+                                        • Mcom
+                                        iii. Science
+                                        • B.Sc.
+                                        • M.Sc. </small></a></p>
+                        </button>
+
+                        <button class="btn b35">slip-25
+                            <p class="p1 p35"><a href="w25-1.html" class="php">Q1)Write a JavaScript function
+                                    that reverse
+                                    a input number </a></p>
+                            <p class="p1 p335"><a href="w1-2.html" class="php">
+                                    Q2) Create HTML page to Divide the frames in to different sections as shown below
+                                    and add appropriate HTML files to each frame. </a></p>
+                        </button>
+                    </div>
+                    <div class="sec">
+                        <button class="btn b36">slip-26
+                            <p class="p1 p36"><a href="w9-1.html" class="php"><small> Write a JavaScript
+                                        function that
+                                        checks whether a input string is palindrome or not.</small> </a></p>
+                            <p class="p1 p336"><a href="w26-2.html" class="php"><small>
+                                        Q2) Write HTML and CSS code to design a web page. Divide the browser screen into
+                                        two frames. The first frame will display the heading. The second frame contains
+                                        a menu consisting of hyperlinks. Clicking on any one of these hyperlinks will
+                                        display related information in a new page </small></a>
+                            </p>
+                        </button>
+
+
+                        <button class="btn b37">slip-27
+                            <p class="p1 p37"><a href="w27-1.html" class="php">Q1)Write a JavaScript function
+                                    to compute
+                                    the sum of factors of a input number </a></p>
+                            <p class="p1 p337"><a href="w6-2.html" class="php">
+                                    Q2) Write a HTML code to display calendar of current month in tabular format. Use
+                                    proper color for week days and holidays. Display month name, year and images as
+                                    advertisement at the beginning of the calendar.</a></p>
+                        </button>
+
+
+                        <button class="btn b38">slip-28
+                            <p class="p1 p38"><a href="w28-1.html" class="php"><small>Q1)Write a JavaScript
+                                        program to
+                                        construct the following pattern up to n lines, using a nested for loop. <br>
+                                        *<br>
+                                        * *<br>
+                                        * * *</small></a></p>
+                            <p class="p1 p338"><a href="w28-2.html" class="php"><small>
+                                        Q2) Design a HTML form for Bus Ticket Reservation consisting of fields for Name,
+                                        Address, contact no, source station(Dropdown list), Destination station, Date of
+                                        booking, date of journey, no of passenger, name of passenger, gender of
+                                        passenger etc. You should provide button to submit as well as reset the form
+                                        contents. (Use proper alignment)</small></a></p>
+                        </button>
+
+                        <button class="btn b39">slip-29
+                            <p class="p1 p39"><a href="w29-1.html" class="php"><small>Q1) Write a JavaScript
+                                        function that
+                                        accept three numbers and display the larger number </small></a></p>
+                            <p class="p1 p339"><a href="w29-2.html" class="php"><small>
+
+                                        Q2)HTML page with following specifications <br>
+                                        i) Title should be about your City.<br>
+                                        ii) Color the background by Pink color.<br>
+                                        iii) Place your city name at the top of page in large text and in blue
+                                        color.<br>
+                                        iv) Add names of the landmarks in your city, each in different color, style and
+                                        font<br>
+                                        v) Add scrolling text about your City.<br>
+                                        vi) Add any image at the bottom. </small></a></p>
+                        </button>
+
+                        <button class="btn b40">slip-30
+                            <p class="p1 p40"><a href="w30-1.html" class="php">Q1Write a JavaScript program to
+                                    construct the following pattern up to n lines, using a nested for loop.<br>
+                                    A<br>
+                                    B C<br>
+                                    D E F </a></p>
+                            <p class="p1 p440"><a href="r12.html" class="php">
+                                    Q2) Create HTML page to Divide the frames in to different sections as shown below
+                                    and add appropriate HTML files to each frame. </a></p>
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <footer>
+                <div class="foot">
+                </div>
+            </footer>
+
+        </div>
+
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+    </div>
+    <script>
+
+        document.querySelector('.b1').addEventListener("mouseover", () => {
+            document.querySelector(`.p1`).style.display = "block";
+            document.querySelector(`.p11`).style.display = "block";
+            document.querySelector('.b1').classList.add("b11");
+        })
+
+        document.querySelector('.b1').addEventListener("mouseout", () => {
+            document.querySelector('.p1').style.display = "none";
+            document.querySelector('.p11').style.display = "none";
+        })
+
+
+        document.querySelector('.b2').addEventListener("mouseover", () => {
+            document.querySelector(`.p2`).style.display = "block";
+            document.querySelector(`.p12`).style.display = "block";
+            document.querySelector('.b2').classList.add("b11");
+        })
+
+        document.querySelector('.b2').addEventListener("mouseout", () => {
+            document.querySelector('.p2').style.display = "none";
+            document.querySelector('.p12').style.display = "none";
+        })
+
+
+        document.querySelector('.b3').addEventListener("mouseover", () => {
+            document.querySelector(`.p3`).style.display = "block";
+            document.querySelector(`.p13`).style.display = "block";
+            document.querySelector('.b3').classList.add("b11");
+        })
+
+        document.querySelector('.b3').addEventListener("mouseout", () => {
+            document.querySelector('.p3').style.display = "none";
+            document.querySelector('.p13').style.display = "none";
+        })
+
+
+        document.querySelector('.b4').addEventListener("mouseover", () => {
+            document.querySelector(`.p4`).style.display = "block";
+            document.querySelector(`.p14`).style.display = "block";
+            document.querySelector('.b4').classList.add("b11");
+        })
+
+        document.querySelector('.b4').addEventListener("mouseout", () => {
+            document.querySelector('.p4').style.display = "none";
+            document.querySelector('.p14').style.display = "none";
+        })
+
+
+        document.querySelector('.b5').addEventListener("mouseover", () => {
+            document.querySelector(`.p5`).style.display = "block";
+            document.querySelector(`.p15`).style.display = "block";
+            document.querySelector('.b5').classList.add("b11");
+        })
+
+        document.querySelector('.b5').addEventListener("mouseout", () => {
+            document.querySelector('.p5').style.display = "none";
+            document.querySelector('.p15').style.display = "none";
+        })
+
+        document.querySelector('.b6').addEventListener("mouseover", () => {
+            document.querySelector(`.p6`).style.display = "block";
+            document.querySelector(`.p16`).style.display = "block";
+            document.querySelector('.b6').classList.add("b11");
+        })
+
+        document.querySelector('.b6').addEventListener("mouseout", () => {
+            document.querySelector('.p6').style.display = "none";
+            document.querySelector('.p16').style.display = "none";
+        })
+
+
+        document.querySelector('.b7').addEventListener("mouseover", () => {
+            document.querySelector(`.p7`).style.display = "block";
+            document.querySelector(`.p17`).style.display = "block";
+            document.querySelector('.b7').classList.add("b11");
+        })
+
+        document.querySelector('.b7').addEventListener("mouseout", () => {
+            document.querySelector('.p7').style.display = "none";
+            document.querySelector('.p17').style.display = "none";
+        })
+
+
+        document.querySelector('.b8').addEventListener("mouseover", () => {
+            document.querySelector(`.p8`).style.display = "block";
+            document.querySelector(`.p18`).style.display = "block";
+            document.querySelector('.b8').classList.add("b11");
+        })
+
+        document.querySelector('.b8').addEventListener("mouseout", () => {
+            document.querySelector('.p8').style.display = "none";
+            document.querySelector('.p18').style.display = "none";
+        })
+
+        document.querySelector('.b9').addEventListener("mouseover", () => {
+            document.querySelector(`.p9`).style.display = "block";
+            document.querySelector(`.p19`).style.display = "block";
+            document.querySelector('.b9').classList.add("b11");
+        })
+
+        document.querySelector('.b9').addEventListener("mouseout", () => {
+            document.querySelector('.p9').style.display = "none";
+            document.querySelector('.p19').style.display = "none";
+        })
+
+        document.querySelector('.b10').addEventListener("mouseover", () => {
+            document.querySelector(`.p10`).style.display = "block";
+            document.querySelector(`.p110`).style.display = "block";
+            document.querySelector('.b10').classList.add("b11");
+        })
+
+        document.querySelector('.b10').addEventListener("mouseout", () => {
+            document.querySelector('.p10').style.display = "none";
+            document.querySelector('.p110').style.display = "none";
+        })
+
+
+        document.querySelector('.b21').addEventListener("mouseover", () => {
+            document.querySelector(`.p21`).style.display = "block";
+            document.querySelector(`.p221`).style.display = "block";
+            document.querySelector('.b21').classList.add("b11");
+        })
+
+        document.querySelector('.b21').addEventListener("mouseout", () => {
+            document.querySelector('.p21').style.display = "none";
+            document.querySelector('.p221').style.display = "none";
+        })
+
+        document.querySelector('.b22').addEventListener("mouseover", () => {
+            document.querySelector(`.p22`).style.display = "block";
+            document.querySelector(`.p222`).style.display = "block";
+            document.querySelector('.b22').classList.add("b11");
+        })
+
+        document.querySelector('.b22').addEventListener("mouseout", () => {
+            document.querySelector('.p22').style.display = "none";
+            document.querySelector('.p222').style.display = "none";
+        })
+
+        document.querySelector('.b23').addEventListener("mouseover", () => {
+            document.querySelector(`.p23`).style.display = "block";
+            document.querySelector(`.p223`).style.display = "block";
+            document.querySelector('.b23').classList.add("b11");
+        })
+
+        document.querySelector('.b23').addEventListener("mouseout", () => {
+            document.querySelector('.p23').style.display = "none";
+            document.querySelector('.p223').style.display = "none";
+        })
+
+        document.querySelector('.b24').addEventListener("mouseover", () => {
+            document.querySelector(`.p24`).style.display = "block";
+            document.querySelector(`.p224`).style.display = "block";
+            document.querySelector('.b24').classList.add("b11");
+        })
+
+        document.querySelector('.b24').addEventListener("mouseout", () => {
+            document.querySelector('.p24').style.display = "none";
+            document.querySelector('.p224').style.display = "none";
+        })
+
+        document.querySelector('.b25').addEventListener("mouseover", () => {
+            document.querySelector(`.p25`).style.display = "block";
+            document.querySelector(`.p225`).style.display = "block";
+            document.querySelector('.b25').classList.add("b11");
+        })
+
+        document.querySelector('.b25').addEventListener("mouseout", () => {
+            document.querySelector('.p25').style.display = "none";
+            document.querySelector('.p225').style.display = "none";
+        })
+
+        document.querySelector('.b26').addEventListener("mouseover", () => {
+            document.querySelector(`.p26`).style.display = "block";
+            document.querySelector(`.p226`).style.display = "block";
+            document.querySelector('.b26').classList.add("b11");
+        })
+
+        document.querySelector('.b26').addEventListener("mouseout", () => {
+            document.querySelector('.p26').style.display = "none";
+            document.querySelector('.p226').style.display = "none";
+        })
+
+        document.querySelector('.b27').addEventListener("mouseover", () => {
+            document.querySelector(`.p27`).style.display = "block";
+            document.querySelector(`.p227`).style.display = "block";
+            document.querySelector('.b27').classList.add("b11");
+        })
+
+        document.querySelector('.b27').addEventListener("mouseout", () => {
+            document.querySelector('.p27').style.display = "none";
+            document.querySelector('.p227').style.display = "none";
+        })
+
+        document.querySelector('.b28').addEventListener("mouseover", () => {
+            document.querySelector(`.p28`).style.display = "block";
+            document.querySelector(`.p228`).style.display = "block";
+            document.querySelector('.b28').classList.add("b11");
+        })
+
+        document.querySelector('.b28').addEventListener("mouseout", () => {
+            document.querySelector('.p28').style.display = "none";
+            document.querySelector('.p228').style.display = "none";
+        })
+
+        document.querySelector('.b29').addEventListener("mouseover", () => {
+            document.querySelector(`.p29`).style.display = "block";
+            document.querySelector(`.p229`).style.display = "block";
+            document.querySelector('.b29').classList.add("b11");
+        })
+
+        document.querySelector('.b29').addEventListener("mouseout", () => {
+            document.querySelector('.p29').style.display = "none";
+            document.querySelector('.p229').style.display = "none";
+        })
+
+        document.querySelector('.b30').addEventListener("mouseover", () => {
+            document.querySelector(`.p30`).style.display = "block";
+            document.querySelector(`.p330`).style.display = "block";
+            document.querySelector('.b30').classList.add("b11");
+        })
+
+        document.querySelector('.b30').addEventListener("mouseout", () => {
+            document.querySelector('.p30').style.display = "none";
+            document.querySelector('.p330').style.display = "none";
+        })
+
+        document.querySelector('.b31').addEventListener("mouseover", () => {
+            document.querySelector(`.p31`).style.display = "block";
+            document.querySelector(`.p331`).style.display = "block";
+            document.querySelector('.b31').classList.add("b11");
+        })
+
+        document.querySelector('.b31').addEventListener("mouseout", () => {
+            document.querySelector('.p31').style.display = "none";
+            document.querySelector('.p331').style.display = "none";
+        })
+
+        document.querySelector('.b32').addEventListener("mouseover", () => {
+            document.querySelector(`.p32`).style.display = "block";
+            document.querySelector(`.p332`).style.display = "block";
+            document.querySelector('.b32').classList.add("b11");
+        })
+
+        document.querySelector('.b32').addEventListener("mouseout", () => {
+            document.querySelector('.p32').style.display = "none";
+            document.querySelector('.p332').style.display = "none";
+        })
+
+        document.querySelector('.b33').addEventListener("mouseover", () => {
+            document.querySelector(`.p33`).style.display = "block";
+            document.querySelector(`.p333`).style.display = "block";
+            document.querySelector('.b33').classList.add("b11");
+        })
+
+        document.querySelector('.b33').addEventListener("mouseout", () => {
+            document.querySelector('.p33').style.display = "none";
+            document.querySelector('.p333').style.display = "none";
+        })
+
+        document.querySelector('.b34').addEventListener("mouseover", () => {
+            document.querySelector(`.p34`).style.display = "block";
+            document.querySelector(`.p334`).style.display = "block";
+            document.querySelector('.b34').classList.add("b11");
+        })
+
+        document.querySelector('.b34').addEventListener("mouseout", () => {
+            document.querySelector('.p34').style.display = "none";
+            document.querySelector('.p334').style.display = "none";
+        })
+
+        document.querySelector('.b35').addEventListener("mouseover", () => {
+            document.querySelector(`.p35`).style.display = "block";
+            document.querySelector(`.p335`).style.display = "block";
+            document.querySelector('.b35').classList.add("b11");
+        })
+
+        document.querySelector('.b35').addEventListener("mouseout", () => {
+            document.querySelector('.p35').style.display = "none";
+            document.querySelector('.p335').style.display = "none";
+        })
+
+        document.querySelector('.b36').addEventListener("mouseover", () => {
+            document.querySelector(`.p36`).style.display = "block";
+            document.querySelector(`.p336`).style.display = "block";
+            document.querySelector('.b36').classList.add("b11");
+        })
+
+        document.querySelector('.b36').addEventListener("mouseout", () => {
+            document.querySelector('.p36').style.display = "none";
+            document.querySelector('.p336').style.display = "none";
+        })
+
+        document.querySelector('.b37').addEventListener("mouseover", () => {
+            document.querySelector(`.p37`).style.display = "block";
+            document.querySelector(`.p337`).style.display = "block";
+            document.querySelector('.b37').classList.add("b11");
+        })
+
+        document.querySelector('.b37').addEventListener("mouseout", () => {
+            document.querySelector('.p37').style.display = "none";
+            document.querySelector('.p337').style.display = "none";
+        })
+
+        document.querySelector('.b38').addEventListener("mouseover", () => {
+            document.querySelector(`.p38`).style.display = "block";
+            document.querySelector(`.p338`).style.display = "block";
+            document.querySelector('.b38').classList.add("b11");
+        })
+
+        document.querySelector('.b38').addEventListener("mouseout", () => {
+            document.querySelector('.p38').style.display = "none";
+            document.querySelector('.p338').style.display = "none";
+        })
+
+        document.querySelector('.b39').addEventListener("mouseover", () => {
+            document.querySelector(`.p39`).style.display = "block";
+            document.querySelector(`.p339`).style.display = "block";
+            document.querySelector('.b39').classList.add("b11");
+        })
+
+        document.querySelector('.b39').addEventListener("mouseout", () => {
+            document.querySelector('.p39').style.display = "none";
+            document.querySelector('.p339').style.display = "none";
+        })
+
+        document.querySelector('.b40').addEventListener("mouseover", () => {
+            document.querySelector(`.p40`).style.display = "block";
+            document.querySelector(`.p440`).style.display = "block";
+            document.querySelector('.b40').classList.add("b11");
+        })
+
+        document.querySelector('.b40').addEventListener("mouseout", () => {
+            document.querySelector('.p40').style.display = "none";
+            document.querySelector('.p440').style.display = "none";
+        })
+    </script>
+</body>
+
+</html>
