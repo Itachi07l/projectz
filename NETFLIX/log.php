@@ -1,4 +1,5 @@
-<?php
+<!--<?php
+/*
 session_start();
 include("db.php");
 if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -13,7 +14,7 @@ if(!empty($email) && !empty($name)){
 else{echo "plz enter some valid information";}
 
 }
-?>
+?> */-->
 <html>
 
 <head>
