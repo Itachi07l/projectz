@@ -1,33 +1,470 @@
-#include<iostream>
-using namespace std;
-
-class Point {
-    int x, y;
-
-    public:
-        void setpoint(int a, int b) {
-            x = a;
-            y = b;
-        }
-
-        void showpoint() {
-            cout << "(" << x << ", " << y << ")";
-        }
-};
+'''l=[]
+le=int(input("enter a no"))
+for i in range(0,le):
+    e=int(input("enter a element"))
+    l.append(e)
+li=set(l)
+print(list(li))
 
 
-int main() {
-    int a, b;
-    Point p;
+import tkinter
+tk=tkinter.Tk()
+l=tkinter.Label(text="ok")
+l.pack()
+def cal():
+    v=int(e.get())
+    t=v-2024
+    l.configure(text=t)
+e=tkinter.Entry()
+e.pack()
+b=tkinter.Button(text="cal",command=cal)
+b.pack()
+tk.mainloop()
 
-    cout << "Enter coordinates" << endl;
-    cout << "Enter x: ";
-    cin >> a;
-    cout << "Enter y: ";
-    cin >> b;
 
-    p.setpoint(a, b);
-    p.showpoint();
 
-    return 0;
-}
+str="strA"
+up=0
+lo=0
+for i in range(0,len(str)):
+    if(str[i].islower()):
+        lo+=1
+    elif(str[i].isupper()):
+        up+=1
+print(up,lo)
+
+
+import time
+import tkinter
+tk=tkinter.Tk()
+l=tkinter.Label(text="")
+l.pack()
+def cal():
+     t=time.strftime("%H ,%M, %S")
+     l.configure(text=t)
+     tk.after(1000,cal)
+cal()
+tk.mainloop()
+
+
+dic={"1":"a","2":"b"}
+l=input("enter a key");
+if(l in dic.keys()):
+    print("yes key exist");
+    del dic[l]
+    lp=input("enter an new key")
+    ln=input("enter an new value")
+    dic[lp]=ln
+else:
+    print("key doen' t exist")
+print(dic)
+
+class stu():
+    def get(self,r,n,a,g):
+        self.r=r
+        self.n=n
+        self.a=a
+        self.g=g
+class test(stu):
+    def __init__(self,s1,s2,s3):
+        self.s1=s1
+        self.s2=s2
+        self.s3=s3
+        self.t=s1+s2+s3
+    def dis(self):
+        print("name:",self.n,"total:",self.t)
+obj=test(8,7,6)
+obj.get("101","abc","20","m")
+obj.dis()
+obj1=test(8,7,6)
+obj1.get("102","xyz","20","m")
+obj1.dis()
+obj2=test(8,7,6)
+obj2.get("103","x","20","m")
+obj2.dis()
+
+
+import tkinter
+t=tkinter.Tk()
+e=tkinter.Entry(width=20)
+e.pack()
+def ch():
+    p=e.get()
+    t.configure(background=p)
+btn=tkinter.Button(text="change" ,command=ch)
+btn.pack()
+tkinter.mainloop()
+
+class ep():
+    def get(self,eid,n,d,s):
+        self.id=eid
+        self.n=n
+        self.d=d
+        self.s=s
+    def dis(self):
+        print(self.n,self.s)
+class manger(ep):
+    def get1(self,b):
+        self.b=b
+        self.t=self.s+self.b
+    def dis1(self):
+        print("bonus:",self.b,"total sal:",self.t)
+        print("-----------------------------")
+obj=manger()
+obj.get(101,"abc","it",30)
+obj.get1(5)
+obj.dis()
+obj.dis1()
+obj1=manger()
+obj1.get(102,"xyz","it",40)
+obj1.get1(5)
+obj1.dis()
+obj1.dis1()
+obj2=manger()
+obj2.get(107,"x","it",50)
+obj2.get1(5)
+obj2.dis()
+obj2.dis1()
+if(obj.t>obj2.t and obj.t>obj1.t):
+    print("max sal:",obj.t)
+if(obj1.t>obj.t and  obj1.t> obj2.t):
+    print("max sal:",obj1.t)
+if(obj2.t>obj.t and obj2.t> obj1.t):
+    print("max sal:",obj2.t)
+
+
+class g():
+   str=""
+   def get_str(self):
+    l=input("enter a str")
+    self.str=l
+   def put_str(self):
+    print(self.str.upper())
+gg=g()
+gg.get_str()
+gg.put_str()
+'''
+n=10
+t1=0
+t2=1
+t3=0
+for i in range(0,n):
+    print(t3)
+    t3=t1+t2
+    t2=t1
+    t1=t3
+
+
+
+'''
+import math
+r=float(input("enter a r of sphere"))
+s_area=4*math.pi*pow(r,2)
+print("surface area of the sphere is %.2f"%s_area)
+
+volume=(4/3)*math.pi*pow(r,3)
+print("volume of the sphere %.2f"%volume)
+av=6*pow(r,2)
+print("area of cude%2f"%av)
+vc=pow(r,3)
+print("volume of cude%.2f"%vc)
+'''
+
+#slip 7
+'''
+t=(1,2,3,1)
+for i in t:
+   if t.count(i)>1:
+      print(i)
+
+class re:
+   def rev_str(self,s):
+     return ' '.join(reversed(s.split()))
+print(re().rev_str('a b c'))
+
+import tkinter
+import tkinter.messagebox
+t=tkinter.Tk()
+def cl():
+   tkinter.messagebox.showinfo("ok","alert")
+btn=tkinter.Button(text=" click",command=cl)
+btn.pack()
+tkinter.mainloop()
+
+l=((1,2,3),(3,5,2),(2,2,3))
+t=0
+for i in range(0,len(l)):
+    for j in range(0,len(l)):
+      t=t+l[j][i]
+    print("  ",t)
+    t=0
+
+
+import tkinter
+t=tkinter.Tk()
+l=tkinter.Label(text="ok",font=("ink free",50,"bold"))
+l.pack()
+t.mainloop()
+
+i=int(input("enter a no"))
+try:
+    if i>=0:
+        print("correct no")
+    else:
+      raise ValueError("neg not allow")
+except ValueError as e:
+    print(e)
+
+import tkinter
+t=tkinter.Tk()
+def cal():
+    v=int(e.get())
+    v1=int(e1.get())
+    c1=3.14*v*v*v1
+    c2=(2*3.14*v*v1)+(2*3.14*v*v)
+    l.configure(text=c1)
+    l1.configure(text=c2)
+e=tkinter.Entry()
+e1=tkinter.Entry()
+e.pack()
+e1.pack()
+b=tkinter.Button(text="ok", command=cal)
+l=tkinter.Label()
+l1=tkinter.Label()
+l.pack()
+l1.pack()
+b.pack()
+t.mainloop()
+
+class stu:
+    name="abc"
+    mark=80
+    def og(self):
+        print("name:",self.name,"mark:",self.mark)
+    def mo(self):
+        self.name="xyz"
+        self.mark=90
+        print("modified---  name:",self.name,"mark:",self.mark)
+s=stu()
+s.og()
+s.mo()
+
+class rec():
+    l=2
+    w=3
+    def area(self):
+        print(self.l*self.w)
+r=rec()
+r.area()
+
+import tkinter
+t=tkinter.Tk()
+e=tkinter.Entry()
+e.pack()
+def res():
+    l=tkinter.Label(text=e.get().upper())
+    l.pack()
+b=tkinter.Button(text="click" , command=res)
+b.pack()
+t.mainloop()
+
+a=[1,2,3,4,5,6,7,8]
+res=filter(lambda a:a>5,a)
+print(list(res))
+
+import tkinter
+t=tkinter.Tk()
+e=tkinter.Entry()
+e.pack()
+def cal():
+    v=int(e.get());
+    for i in range(0,11):
+        l=tkinter.Label(text=i*v)
+        l.pack()
+b=tkinter.Button(text="click",command=cal)
+b.pack()
+t.mainloop()
+
+class cir():
+    def __init__(self,r):
+        self.r=r
+    def area(self):
+        print(3.14*self.r*self.r)
+    def cir(self):
+        print(2*3.14*self.r)
+c=cir(6)
+c.area()
+c.cir()
+
+
+t=(('333','33'),('1416','55'))
+t1=((int('333'),int('33')),(int('1416'),int('55')))
+print(t)
+print(t1)
+
+l=[99,22,66,33,2,88]
+for i in range(len(l)):
+    for j in range(0,len(l)-1):
+        if(l[j]>l[j+1]):
+            temp=l[j+1]
+            l[j+1]=l[j]
+            l[j]=temp
+print(l)
+
+import tkinter
+t=tkinter.Tk()
+l=tkinter.Label(text="hello world" ,font=("ink free",40,"bold",))
+l.pack()
+t.mainloop()
+
+class cir:
+    def __init__(self,r):
+        self.r=r
+    def get(self):
+        return self.r
+    def __add__(self,a):
+        return cir(self.r + a.r)
+c=cir(2)
+c1=cir(4)
+c2=c+c1
+print(c2.get())
+'''
+#slip 24
+'''
+def str():
+   up=0
+   lo=0
+   l=input("enter a str")
+   for i in range(0,len(l)):   
+    if(l[i].isupper()):
+      up+=1
+    if(l[i].islower()):
+      lo+=1
+   print(lo,up)
+str()
+
+class cal():
+  def __init__(self,n):
+      self.n=n
+  def add(self):
+      print(self.n+self.n)
+c=cal(4)
+c.add()
+
+l=lambda x:x**2
+r=lambda x:x*x
+print(l(2))
+print(r(4))
+
+import math
+print(math.factorial(5))
+
+for i in range(2,11):
+    if 11%i==0:
+        print("not a prime")
+    else:
+        print("prime")
+
+import tkinter
+t=tkinter.Tk()
+e=tkinter.Entry()
+e.pack()
+def res():
+    n=list(map(int,e.get()))
+    lis=[]
+    for a in range(0,(len(n))):
+     if(n[a]==1):
+         lis.append("one")
+         #l=tkinter.Label(text="one").pack()
+     if(n[a]==2):
+         lis.append("two")
+         #l=tkinter.Label(text="two").pack()
+    l=tkinter.Label(text=lis).pack()
+b=tkinter.Button(text="show", command=res)
+b.pack()
+t.mainloop()
+
+l=[(1,2),(3,4)]
+ll=[list((1,2)),list((3,4))]
+print(ll)
+
+import tkinter
+t=tkinter.Tk()
+l=tkinter.Listbox()
+l.insert(1,"c");
+l.insert(2,"c+");
+l.insert(3,"js");
+l.insert(4,"java");
+l.pack()
+
+e=tkinter.Entry()
+e.pack()
+def cal():
+    v=int(e.get())
+    l=tkinter.Label(text=bin(v)).pack()
+    l1=tkinter.Label(text=oct(v)).pack()
+    l2=tkinter.Label(text=hex(v)).pack()
+
+b=tkinter.Button(text="res", command=cal)
+b.pack()
+t.mainloop()
+
+l=[1,2]
+l1=[3,4]
+t=[tuple(l),tuple(l1)]
+print(t)
+
+import tkinter
+t=tkinter.Tk()
+e=tkinter.Entry()
+e.pack()
+def cal():
+    v=float(e.get())
+    c=float((4/3)*float(3.14*v*v))
+    l=tkinter.Label(text=c).pack()    
+b=tkinter.Button(text="res", command=cal)
+b.pack()
+t.mainloop()
+
+str="abc"
+print(str.count("b"))
+
+import operator
+d={6:4,1:2,3:4,5:1}
+s=sorted(d.items(),key=lambda e:e[0])
+s1=sorted(d.items())
+sr=sorted(d.items(),key=operator.itemgetter(1),reverse=True)
+sr1=sorted(d.items(), reverse=True)
+print(s)
+print(s1)
+print(sr)
+ 
+class n():
+    def getn(self):
+        ip=input("enter a nationilty")
+        self.ip=ip
+    def printn(self):
+            print(self.ip)
+class country(n):
+    def getc(self):
+        ic=input("enter a country")
+        self.ic=ic
+    def printc(self):
+        print(self.ic)
+class state(country):
+    def gets(self):
+        ist=input("enter a state")
+        self.ist=ist
+    def printstate(self):
+        print(self.ist)
+ob=state()
+ob.gets()
+ob.getc()
+ob.getn()
+ob.printstate()
+ob.printc()
+ob.printn()
+
+'''
+
+
