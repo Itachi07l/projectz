@@ -1,4 +1,6 @@
-'''l=[]
+'''
+slip 1: 1-1
+l=[]
 le=int(input("enter a no"))
 for i in range(0,le):
     e=int(input("enter a element"))
@@ -6,7 +8,7 @@ for i in range(0,le):
 li=set(l)
 print(list(li))
 
-
+slip 1 1-2
 import tkinter
 tk=tkinter.Tk()
 l=tkinter.Label(text="ok")
@@ -22,7 +24,7 @@ b.pack()
 tk.mainloop()
 
 
-
+slip 2 2-1
 str="strA"
 up=0
 lo=0
@@ -33,7 +35,7 @@ for i in range(0,len(str)):
         up+=1
 print(up,lo)
 
-
+slip2 2-2
 import time
 import tkinter
 tk=tkinter.Tk()
@@ -46,7 +48,7 @@ def cal():
 cal()
 tk.mainloop()
 
-
+slip3 3-1
 dic={"1":"a","2":"b"}
 l=input("enter a key");
 if(l in dic.keys()):
@@ -59,6 +61,7 @@ else:
     print("key doen' t exist")
 print(dic)
 
+slip3 3-2
 class stu():
     def get(self,r,n,a,g):
         self.r=r
@@ -84,6 +87,7 @@ obj2.get("103","x","20","m")
 obj2.dis()
 
 
+slip 4 4-1
 import tkinter
 t=tkinter.Tk()
 e=tkinter.Entry(width=20)
@@ -95,6 +99,7 @@ btn=tkinter.Button(text="change" ,command=ch)
 btn.pack()
 tkinter.mainloop()
 
+slip 4 4-2
 class ep():
     def get(self,eid,n,d,s):
         self.id=eid
@@ -132,7 +137,7 @@ if(obj1.t>obj.t and  obj1.t> obj2.t):
 if(obj2.t>obj.t and obj2.t> obj1.t):
     print("max sal:",obj2.t)
 
-
+slip 5 5-1
 class g():
    str=""
    def get_str(self):
@@ -143,7 +148,8 @@ class g():
 gg=g()
 gg.get_str()
 gg.put_str()
-'''
+
+slip 5 5-2
 n=10
 t1=0
 t2=1
@@ -156,7 +162,7 @@ for i in range(0,n):
 
 
 
-'''
+slip 6-1
 import math
 r=float(input("enter a r of sphere"))
 s_area=4*math.pi*pow(r,2)
@@ -168,7 +174,7 @@ av=6*pow(r,2)
 print("area of cude%2f"%av)
 vc=pow(r,3)
 print("volume of cude%.2f"%vc)
-'''
+
 
 #slip 7
 '''
