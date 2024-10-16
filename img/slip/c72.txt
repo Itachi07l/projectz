@@ -1,90 +1,52 @@
-#include<iostream.h>
-#include<conio.h>
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
 
-class Vector {
-private:
-    int size;
-    int *ptr;
+public class SimpleCalculator extends Applet implements ActionListener {
+    TextField num1, num2, result;
+    Button add, sub, mul, div;
 
-public:
-    // Parameterized constructor
-    Vector(int s) {
-        size = s;
-        ptr = new int[size];
+    public void init() {
+        num1 = new TextField(5);
+        num2 = new TextField(5);
+        result = new TextField(5);
+        result.setEditable(false);
+        add = new Button("+"); sub = new Button("-"); 
+        mul = new Button("*"); div = new Button("/");
+
+        add(num1); add(num2); add(add); add(sub); add(mul); add(div); add(result);
+
+        add.addActionListener(this);
+        sub.addActionListener(this);
+        mul.addActionListener(this);
+        div.addActionListener(this);
     }
 
-    // Copy constructor
-    Vector(const Vector &other) {
-        size = other.size;
-        ptr = new int[size];
-        for (int i = 0; i < size; ++i) {
-            ptr[i] = other.ptr[i];
+    public void actionPerformed(ActionEvent e) {
+        try {
+            int n1 = Integer.parseInt(num1.getText());
+            int n2 = Integer.parseInt(num2.getText());
+            int res = e.getSource() == add ? n1 + n2 :
+                      e.getSource() == sub ? n1 - n2 :
+                      e.getSource() == mul ? n1 * n2 :
+                      (n2 != 0 ? n1 / n2 : 0);
+            result.setText(n2 == 0 && e.getSource() == div ? "Error" : String.valueOf(res));
+        } catch (NumberFormatException ex) {
+            result.setText("Invalid");
         }
     }
 
-    // Destructor
-    ~Vector() {
-        delete[] ptr;
-    }
-
-    // Method to accept a vector
-    void acceptVector() {
-        cout << "Enter " << size << " elements: ";
-        for (int i = 0; i < size; ++i) {
-            cin >> ptr[i];
-        }
-    }
-
-    // Method to display a vector
-    void displayVector() {
-        cout << "(";
-        for (int i = 0; i < size; ++i) {
-            cout << ptr[i];
-            if (i < size - 1) {
-                cout << ", ";
+    public static void main(String[] args) {
+        Frame frame = new Frame("Simple Calculator");
+        SimpleCalculator applet = new SimpleCalculator();
+        frame.add(applet);
+        frame.setSize(300, 150);
+        frame.setVisible(true);
+        applet.init();
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
             }
-        }
-        cout << ")" << endl;
+        });
     }
-
-    // Method to calculate the union of two vectors
-    Vector calculateUnion(const Vector &other) {
-        int maxSize = (size > other.size) ? size : other.size;
-        Vector result(maxSize);
-        for (int i = 0; i < maxSize; ++i) {
-            if (i < size && i < other.size) {
-                result.ptr[i] = ptr[i] + other.ptr[i];
-            } else if (i < size) {
-                result.ptr[i] = ptr[i];
-            } else {
-                result.ptr[i] = other.ptr[i];
-            }
-        }
-        return result;
-    }
-};
-
-void main() {
-    clrscr();
-    int size1, size2;
-    cout << "Enter the size of first vector: ";
-    cin >> size1;
-    Vector v1(size1);
-    v1.acceptVector();
-
-    cout << "Enter the size of second vector: ";
-    cin >> size2;
-    Vector v2(size2);
-    v2.acceptVector();
-
-    cout << "First vector: ";
-    v1.displayVector();
-    cout << "Second vector: ";
-    v2.displayVector();
-
-    Vector unionVector = v1.calculateUnion(v2);
-    cout << "Union of the two vectors: ";
-    unionVector.displayVector();
-
-    getch();
 }
