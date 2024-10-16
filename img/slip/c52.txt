@@ -1,67 +1,445 @@
-#include<iostream>
-using namespace std;
-
-class shape {
-    public:
-	    virtual void area() = 0;
-};
-
-class circle: public shape {
-   float r;
-
-   public:
-        void area() {
-            cout << "\nEnter radius : ";
-            cin >> r;
-            cout << "\nArea of circle : " << (2.146*r*r);
-        }
-};
-
-
-class rectangle: public shape {
-	int l,b;
-
-    public:
-    void area() {
-        cout << "\nEnter length : ";
-        cin >> l;
-        cout << "\nEnter breadth : ";
-        cin >> b;
-        cout << "\nArea of rectangle : " << (l*b);
+slip1-1
+public class slip11{
+  public static void main(String args[]){
+    char c='a';
+    for(int i=1;i<=25;i++){
+        System.out.print(c);
+        c++;
     }
-};
+  }
+}
+
+slip 2-2
+public class slip21{
+    public static void main(String arg[]){
+        String str="string";
+        char c; 
+        for(int i=0;i<str.length();i++){
+            c=str.charAt(i);
+            if(c=='a' || c=='e' || c=='i' ||c=='o'|| c=='u'){
+                System.out.print(c);
+            }
+        }
+    }
+}
+
+slip3
+
+public class slip31{
+    static int n=153;
+    public static void main(String args[]){
+
+    //   int n[]={2,4,3};
+    //   int sum[]= new int[3];
+    //   for(int i=0;i<n.length;i++){
+    //     sum[i]=n[i]*n[i]*n[i];
+    //   }
+    
+    // int t=sum[0]+sum[1]+sum[2];
+    // if(gn==t){
+    //     System.out.print("arm");
+    // }else{
+    //     System.out.print("no arm");
+    // }
+
+    int sum=n,t=0,l=0;
+    while(sum>0){
+      l=sum%10;
+      t+=l*l*l;
+      sum=sum/10;
+    }
+    if(n==t){
+        System.out.print("ok");
+    }
+    else{
+        System.out.print("no");
+    }
+
+    }
+}
+
+slip  4
+public class slip41{
+    public static void main(String args[]){
+        String str="string";
+        for(int i=0;i<str.length();i=i+2){
+            System.out.print(str.charAt(i));
+        }
+    }
+}
+
+slip 5
+import java.io.*;
+class Slip5{
+    public static void main(String args[]){
+    /*for(int i=5;i>=1;i--){
+       for(int j=i;j<=5;j++){
+          System.out.print(j);
+       }System.out.println();
+    }*/
+    
+    for(int i=0;i<args.length;i++){
+        File file=new File(args[i]);
+        if(file.isFile()){
+            String name=file.getName();
+            if(name.endsWith(".txt")){
+                file.delete();
+                System.out.print("delete file:"+file);
+            }else{
+                System.out.print("name"+name+"\nfile location"+file.getAbsolutePath()+"file size"+file.length());
+            }
+        }else{
+            System.out.print(args[i]+"is not file");
+        }
+    }
+
+        
+ }
+}
+
+slip 6
+class error extends Exception{}
+public class slip61{
+    public static void main(String args[]){
+        int n=0,n1=0;
+        try{
+            if(n==0 || n1==0){
+                throw new error();
+            }else{System.out.print(n+n1);}
+        }catch(error e){System.out.print("Number Is Zero");}
+}}
+
+slip 7
+import java.awt.*;
+public class slip71 extends Frame{
+    slip71(){
+       Label l=new Label("ok");
+       setBackground(Color.red);
+       Font f=new Font("",Font.BOLD,40);
+       l.setFont(f);
+       add(l);
+       setVisible(true);
+    }
+    public static void main(String args[]){
+        new slip71();
+    }
+}
+
+slip 8
+interface shap{
+    final static float p=3.14f;
+    float area(float f);
+}
+class circle implements shap{
+  public  float area(float f){
+        return(3.14f*f*f);
+    }
+}
+class  sphere implements shap{
+  public  float area(float f){
+        return (2*3.14f*f);
+    }
+}
+public class slip81{
+    public static void main(String args[]){
+        circle c=new circle();
+        sphere sp=new sphere();
+        shap s;
+        s=c;
+        System.out.println(s.area(2));
+        s=sp;
+        System.out.print(s.area(4));
+
+    }
+}
+
+slip 9
+public class slip91{
+    public static void main(String args[]){
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                // if((i+j)%2==1){
+                //     System.out.print("1");
+                // }else{System.out.print("0");}
+                if((i-j)==0 || (i-j)==2 ||(i-j)==4){
+                    System.out.print("1");
+                }
+                if((i-j)==1 || (i-j)==3){
+                    System.out.print("0");
+
+                }
+            }System.out.println(" ");
+        }
+    }
+}
+
+slip 10
+public class slip10{
+    public static void main(String args[]){
+        String str="abab";
+        int[] freq=new int[str.length()];
+        char string[]=str.toCharArray();
+        int i,j;
+        for(i=0;i<str.length();i++){
+            freq[i]=1;
+            for(j=i+1;j<str.length();j++){
+                if(string[i]==string[j]){
+                    freq[i]++;
+                    string[j]='0';
+                }
+            }
+        }
+        for(i=0;i<str.length();i++){
+            if(string[i]!=' ' && string[i]!='0'){
+                System.out.print(string[i]+"-"+freq[i]);
+            }
+        }
+    }
+}
+
+slip 11
+import java.util.Scanner;
+public class slip_11{
+    public static void main(String arg[]){
+      Scanner sc=new Scanner(System.in);
+      System.out.print("enter a no:");
+      int no=sc.nextInt();
+      int a,b;
+      if(no==1){
+        System.out.print("enter a no :");
+        a=sc.nextInt();
+        System.out.print("enter another no:");
+        b=sc.nextInt();
+        System.out.print(a+b);
+      }
+      if(no==2){
+        System.out.print("enter a no :");
+        a=sc.nextInt();
+        System.out.print("enter another no:");
+        b=sc.nextInt();
+        System.out.print(a-b);
+      }
+      if(no==3){
+        System.out.print("enter a no :");
+        a=sc.nextInt();
+        System.out.print("enter another no:");
+        b=sc.nextInt();
+        System.out.print(a*b);
+      }
+    }
+}
+slip 12
+import java.util.Scanner;
+public class slip_12{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n,ele;
+        System.out.print("enter a no:");
+        n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+        System.out.print("enter a element:");
+        ele=sc.nextInt();
+        arr[i]=ele;
+        }
+        for(int i=n-1;i>=0;i--){
+        System.out.print(arr[i]);
+        }
+    }
+}
+
+slip 14
+public class slip_14{
+    public static int po(int n,int n1){
+        if(n1!=0){
+            return (n*po(n,n1-1));
+        }else{return 1;}
+    }
+    public static void main(String arg[]){
+       System.out.print(po(3,4));
+    }
+}
+
+slip 15
+import java.util.Scanner;
+public class slip_15{
+    public static void main(String arg[]){
+        String str[]={"abc","pqr","xyz"};
+        String s;
+        int idx=-1;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a name");
+        s=sc.nextLine();
+        for(int i=0;i<str.length;i++){
+            if(str[i].equals(s)){
+               idx=i; break;
+            }
+        }
+        if(idx !=-1){   
+         System.out.print(idx);
+        }else{
+         System.out.print("not found");
+
+        }
+    }
+}
 
 
-class triangle: public shape {
-	int h,b;
-    float a;
+slip 16
+public class slip_16{
+    public static int su(int n){
+        if(n!=0){
+            return n%10+su(n/10);
+        }else{return 0;}
+    }
+    public static void main(String arg[]){
+        System.out.print(su(12345));
+    }
+}
 
-    public:
-       void area() {
-   	        cout << "\nEnter height : ";
-            cin >> h;
-            cout << "\nEnter breadth : ";
-            cin >> b;
-            cout << "\nArea of triangle : " << (0.5*h*b);
+slip 17
+import java.util.Scanner;
+public class slip_17{
+    public static int arm(int n){
+    int sum,last,t=0,no=n;
+    while(no>0){
+    last=no%10;
+    t+=last*last*last;
+    no=no/10;
+    }
+    if(n==t){
+        return n;
+    }else{return 0;}
+    }
+    public static void main(String arg[]){
+    int n,ip;
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter a n no:");
+    n=sc.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<n;i++){
+    System.out.print("enter a number:");
+    ip=sc.nextInt();
+    arr[i]=arm(ip);
+    }
+    for(int j=0;j<n;j++){
+        if(arr[j]!=0){
+        System.out.print(arr[j]+" , ");
+        }
+    }
+
+
+
+    }
+}
+
+slip 18
+public class slip_18{
+    public static double area(double r){
+        return r*r*3.14;
+    }
+    public static double area(double b,double h){
+        return 2*b*h;
+    }
+    public static int area(int l,int w){
+        return l*w;
+    }
+    public static void main(String arg[]){
+        System.out.println(area(24.5));
+        System.out.println(area(24.5,22.1));
+        System.out.print(area(24,5));
+    }
+}
+
+slip 19
+public class slip_19{
+    public static void main(String arg[]){
+        int no=10,f=0,s=1,n=0;
+        for(int i=0;i<no;i++){
+            System.out.print(n+" ");
+            n=f+s;
+            f=s;
+            s=n;
+        }
+    }
+}
+
+slip 20
+import java.awt.*;
+import java.awt.event.*;
+public class slip_19 extends Frame{
+    slip_19(){
+    Frame frame=new Frame("tybba-ca");
+    frame.setBackground(Color.red);
+
+    
+    frame.addWindowListener(new WindowAdapter(){
+        public void windowClosing(WindowEvent e){
+            frame.dispose();
+        }
+    });
+    frame.setVisible(true);
+    }
+    public static void main(String arg[]){
+     new slip_19();
+    }
+}
+
+slip 123
+import java.io.File;
+public class slip123{
+    public static void main(String[] args){
+        File f=new File("C:/sigma 3.0/java/slip/fhide.txt");
+        if(f.exists()){
+            if(f.isHidden()){
+            System.out.print("hide");
+            }else{
+             System.out.print("no-hide");
+
+            }
+            System.out.print(f.getAbsolutePath());
+        }else{
+            System.out.print("no");
+        }
+    }
+}
+slip 125
+public class slip125{
+    public static void main(String arg[]){
+       String str="a";
+       String rstr="";
+       for(int i=str.length()-1;i>=0;i--){
+        rstr+=str.charAt(i);
        }
-};
+       System.out.println(str);
+       System.out.println(rstr);
 
+       if(rstr==str){
+        System.out.print("yes");
+       }else{System.out.print("no");}
+    }
+}
 
-int main() {
-    circle c;
-    c.area();
-
-    cout << endl;
-
-    rectangle r;
-    r.area();
-
-    cout << endl;
-
-    triangle t;
-    t.area();
-
-    cout << endl;
-
-   return(0);
+slip  212
+import java.util.Hashtable;
+import java.util.Scanner;
+import java.io.*;
+public class slip212{
+    public static void main(String[] args){
+      Hashtable<String, String>city=new Hashtable;
+      city.put("new york","212");
+      System.out.println("city std city:");
+      for(String c:city.keySet()){
+        System.out.print(c + " " +city.get(c));
+      }
+      Scanner sc=new Scanner(System.in);
+      System.out.print("enter a name:");
+      String n=sc.nextLine();
+      String sd=city.get(n);
+      if(sd!=null){
+        System.out.print("std:"+n+sd);
+      }else{
+        System.out.print("no");
+      }
+    }
 }
